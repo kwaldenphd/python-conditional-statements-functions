@@ -33,6 +33,22 @@ Elements of this lab procedure were adapted from materials developed by [Lindsay
 
 # Table of Contents
 
+- [Conditional execution and `if` statements](#conditional-execution-and-if-statements)
+  * [Review of logical conditions](#review-of-logical-conditions)
+  * [Working with `if` statements](#working-with-if-statements)
+  * [`if` statements and strings](#if-statements-and-strings)
+  * [Conditional statements and `if`](#conditional-statements-and-if)
+  * [Additional work with `if` statements](#additional-work-with-if-statements)
+- [Working with loops](#working-with-loops)
+  * [`for` loops](#for-loops)
+  * [`while` loops](#while-loops)
+  * [Additional work with loops](#additional-work-with-loops)
+    * [Additional practice with loops (optional)](#additional-practice-with-loops-optional)
+  * [Nesting within loops](#nesting-within-loops)
+- [Working with functions](#working-with-functions)
+- [Lab Notebook Questions](#lab-notebook-questions)
+
+
 # Conditional execution and `if` statements
 
 <blockquote>Q1: In your own words, what is a boolean/logical expression?</blockquote>
@@ -106,7 +122,7 @@ if number > 0:
 
 <blockquote>Q4: Describe how you approached writing the program for Q3.</blockquote>
 
-# Conditional statements and `if`
+## Conditional statements and `if`
 
 19. If-then statements are another common computer function. If statements are conditional, meaning that there is a test to determine if a statement is true or false and then the computer takes some defined action.
 ```Python
@@ -438,7 +454,7 @@ Enter the increment: 2
 
 <blockquote>Q18: Include your program for steps 59-60, including commments that document what the code is doing.</blockquote>
 
-## Additional practice with loops (optional)
+### Additional practice with loops (optional)
 
 61. Use programs that use `for` loops to accomplish the following tasks:
 - Sum all of the odd numbers between 0 and 100.
@@ -474,7 +490,7 @@ happy
 
 68. This can be accomplished by placing an if-statement within the while-loop to do something special for the lineNumber == 7 case.
 
-<blockquote>QX: Include your program for steps 65-68, including commments that document what the code is doing.</blockquote>
+<blockquote>Q19: Include your program for steps 65-68, including commments that document what the code is doing.</blockquote>
 
 69. Write a program that plays a familiar guessing game.
 - First your program will set some number to be the "correct answer"
@@ -504,7 +520,7 @@ CORRECT! You Win!
 - This program will require a loop with some if-statements inside it.
 - Each time through the loop, you must accept a new guess from the user. This can be done by using the function input inside the loop.
 
-<blockquote>Q19: Include your program for steps 69-71, including commments that document what the code is doing.</blockquote>
+<blockquote>Q20: Include your program for steps 69-71, including commments that document what the code is doing.</blockquote>
 
 72. Write a program that reads in three strings and prints them out in alphabetical order. 
 
@@ -528,19 +544,19 @@ if number > 2 and number < 10:
 if word1 > word2 and word2 > word 3:
   **do something interesting here**
 ```
-<blockquote>Q20: Include your program for steps 72-75, including commments that document what the code is doing.</blockquote>
+<blockquote>Q21: Include your program for steps 72-75, including commments that document what the code is doing.</blockquote>
 
 # Working with functions
 
-<blockquote>Q21: In your own words, what is a function?</blockquote>
+<blockquote>Q22: In your own words, what is a function?</blockquote>
 
-<blockquote>Q22: How do we create a function?</blockquote>
+<blockquote>Q23: How do we create a function?</blockquote>
 
-<blockquote>Q23: In your own words, what is an argument or parameter?</blockquote>
+<blockquote>Q24: In your own words, what is an argument or parameter?</blockquote>
 
-<blockquote>Q24: In you own words, what is a return value?</blockquote>
+<blockquote>Q25: In you own words, what is a return value?</blockquote>
 
-<blockquote>Q25: Why would we use functions?</blockquote>
+<blockquote>Q26: Why would we use functions?</blockquote>
 
 76. Function syntax:
 ```Python
@@ -556,10 +572,68 @@ def function_name(arguments):
 def my_function()
 ```
 
-<blockquote>Q26: Write a function <code>is_even</code> that determines whether or not a number <code>n</code> is even. Answer includes your code + comments.</blockquote>
+<blockquote>Q27: Write a function <code>is_even</code> that determines whether or not a number <code>n</code> is even. Answer includes your code + comments.</blockquote>
 
-<blockquote>Q27: Write a function <code>average</code> that determines the average value of a list. Answer includes your code + comments.</blockquote>
+<blockquote>Q28: Write a function <code>average</code> that determines the average value of a list. Answer includes your code + comments.</blockquote>
 
-<blockquote>Q28: Write a function <code>uniq</code> that takes a list and returns a new list containing only unique values.</blockquote>
+<blockquote>Q29: Write a function <code>uniq</code> that takes a list and returns a new list containing only unique values.</blockquote>
 
 # Lab Notebook Questions
+
+Q1: In your own words, what is a boolean/logical expression?
+
+Q2: In your words, what is as conditional statement (or conditional execution)?
+
+Q3: Provide your code + comments for steps 13-18.
+
+Q4: Describe how you approached writing the program for Q3.
+
+Q5: Did the program return the results that you expected? Explain the output in your own words.
+
+Q6: Explain what this program will output and why.
+
+Q7: Include your modified code for step 26, including comments that describe what the code is doing.
+
+Q8: Return to your Q3 program and modify so it prints one message if the user enters your favorite color, and a different message if not. In addition, your program should print a final message for every user, regardless of what they entered. Answer will include your modified code + comments that explain/describe what the code is doing.
+
+Q9: What do you expect this code to output? Explain how this program works in your own words.
+
+Q10: Modify the program from steps 35-48 so that it prints some word or phrase nine times, and also prints a line number at the beginning of each line. Answer will include code + comments.
+
+Q11: In your own words, what is iteration?
+
+Q12: In your own words, what is the difference between a `while` loop and a `for` loop?
+
+Q13: Write a loop that prints out all numbers from 0 to 10. Include your code + comments that document how the code works.
+
+Q14: Include your modified code for step 50, including commments that document what changes you made.
+
+Q15: Include your modified code for steps 51-53, including commments that document what changes you made to address the errors.
+
+Q16: Include your program for steps 54-56, including commments that document what the code is doing.
+
+Q17: Include your program for steps 57-58, including commments that document what the code is doing.
+
+Q18: Include your program for steps 59-60, including commments that document what the code is doing.
+
+Q19: Include your program for steps 65-68, including commments that document what the code is doing.
+
+Q20: Include your program for steps 69-71, including commments that document what the code is doing.
+
+Q21: Include your program for steps 72-75, including commments that document what the code is doing.
+
+Q22: In your own words, what is a function?
+
+Q23: How do we create a function?
+
+Q24: In your own words, what is an argument or parameter?
+
+Q25: In you own words, what is a return value?
+
+Q26: Why would we use functions?
+
+Q27: Write a function `is_even` that determines whether or not a number n is even. Answer includes your code + comments.
+
+Q28: Write a function `average` that determines the average value of a list. Answer includes your code + comments.
+
+Q29: Write a function `uniq` that takes a list and returns a new list containing only unique values.
