@@ -39,7 +39,23 @@ Elements of this lab procedure were adapted from materials developed by [Lindsay
 
 <blockquote>QX: In your words, what is as conditional statement (or conditional execution)?</blockquote>
 
-## `if` statement overview
+## Review of logical conditions
+
+Operators used to compare two objects:
+- `==`    equal to
+- `==`    equal to
+- `!=`    not equal to
+- `>=`    greater than or equal to
+- `>`     greater than
+- `<`     less than
+- `<=`    less than or equal to
+
+Boolean logical operators:
+- `and`   both must be true
+- `or`    one or both must be true
+- `not`   reverses the truth value
+
+## Working with `if` statements
 
 So far, all the programs we have written work by executing each statement in the program in order, from top to bottom. 
 
@@ -70,22 +86,6 @@ If all went well, you should have discovered that when python encounters an if s
 
 If it is, python executes all statements that immediately follow the if clause and are indented beneath it. If the condition is false, these statements are skipped. In either case, execution will then continue with the next un-indented statement. 
 
-## Review of logical conditions
-
-Operators used to compare two objects:
-- `==`    equal to
-- `==`    equal to
-- `!=`    not equal to
-- `>=`    greater than or equal to
-- `>`     greater than
-- `<`     less than
-- `<=`    less than or equal to
-
-Boolean logical operators:
-- `and`   both must be true
-- `or`    one or both must be true
-- `not`   reverses the truth value
-
 ## `if` statements and strings
 
 The if statement and relational operators work for comparing strings just like they do for comparing numbers.
@@ -106,12 +106,12 @@ Test your program to make sure it works.
 
 <blockquote>QX: Describe how you approached writing the program for QX.</blockquote>
 
-# Task 8: If...Statements
+# Conditional statements and `if`
 
 79. If-then statements are another common computer function. If statements are conditional, meaning that there is a test to determine if a statement is true or false and then the computer takes some defined action.
 ```Python
 #here is a list of names
-names=['department of computer science', 'computer science department', 'cs']
+names=['department of computer science and engineering', 'computer science department', 'cse']
 
 #here is a loop. I am telling Python to look at each of the items in this list
 for name in names:
@@ -119,7 +119,7 @@ for name in names:
   #this indent tells Python that this next action is part of the loop
   #this is my if statement. Note that like a loop it ends in a colon (:)
   #the double == is an equality operator. It's a boolean test (returns TRUE or FALSE)
-  if name == 'cs':
+  if name == 'cse':
 
     #if the value is equal to cs, then the conditional statement returns TRUE and the value is printed in all upper case letters
     print(name.upper())
@@ -132,16 +132,16 @@ for name in names:
 ```
 
 80. This program returns the output
-`Department of Computer Science`
+`Department of Computer Science and Engineering`
 `Computer Science Department`
-`CS`
+`CSE`
 
 81. This program without the comments:
 ```Python
-names=['department of computer science', 'computer science department', 'cs']
+names=['department of computer science and engineering', 'computer science department', 'cse']
 
 for name in names:
-  if name == 'cs':
+  if name == 'cse':
     print(name.upper())
   else:
     print(name.title())
@@ -227,7 +227,7 @@ print "This message prints every time."
 
 <blockquote>QX: Return to your QX program and modify so it prints one message if the user enters your favorite color, and a different message if not. In addition, your program should print a final message for every user, regardless of what they entered. Answer will include your modified code + comments that explain/describe what the code is doing.</blockquote>
 
-# Task 7: Working With Loops
+# Working with loops
 
 73. Loops are one of the most common computer functions. 
 
@@ -328,8 +328,10 @@ Predict what will happen if you remove the statement `count = count + 1`. Remove
 
 If all went "well", you should have discovered what we call an infinite loop. This means your program will continue running forever, unless you stop it from outside. 
 
-<blockquote>QX: Modify the program from steps xx-xx so that it prints some word or phrase nine times, and also prints a line number at the beginning of each line. For example, your output might look like the following: 
-<code>
+<blockquote>QX: Modify the program from steps xx-xx so that it prints some word or phrase nine times, and also prints a line number at the beginning of each line. </blockquote>
+
+For example, your output might look like the following: 
+```Python
 1 Python
 2 Python
 3 Python
@@ -340,14 +342,13 @@ If all went "well", you should have discovered what we call an infinite loop. Th
 8 Python
 9 Python
 IS FUN!
-  </code>
-  </blockquote>
+```
 
 <blockquote>QX: In your own words, what is iteration?</blockquote>
 
 <blockquote>QX: In your own words, what is the difference between a <code>while</code> loop and a <code>for</code> loop?</blockquote>
 
-## Additional work with conditional statements
+## Additional work with loops
 
 <blockquote>QX: Write a loop that prints out all numbers from 0 to 10. Include your code + comments that document how the code works.</blockquote>
   
