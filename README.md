@@ -233,10 +233,10 @@ else:
 ```Python
 number = input("Enter a number: ")
 if number > 0:
-  print "That number is positive."
+  print ("That number is positive.")
 else:
-  print "Definitely NOT positive."
-print "This message prints every time."
+  print ("Definitely NOT positive.")
+print ("This message prints every time.")
 ```
 
 <blockquote>Q7: Include your modified code for step 26, including comments that describe what the code is doing.</blockquote>
@@ -320,7 +320,7 @@ while count <= 5:
    print "Notre"
    print "Dame"
    count = count + 1
-print "Done"
+print ("Done")
 ```
 
 38. Now let's walk through the program to understand how it works. 
