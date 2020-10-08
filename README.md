@@ -317,8 +317,8 @@ print(characters[0].title() + " is my favorite.")
 ```Python
 count = 1
 while count <= 5:
-   print "Notre"
-   print "Dame"
+   print ("Notre")
+   print ("Dame")
    count = count + 1
 print ("Done")
 ```
