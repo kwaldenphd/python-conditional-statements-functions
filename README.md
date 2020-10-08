@@ -81,10 +81,10 @@ Boolean logical operators:
 
 4. Copy the following program and run it a few times, entering different numbers each time. 
 ```Python
-number = input("Enter a number: ")
+number = int(input("Enter a number: "))
 if number > 0:
-  print "That number is positive."
-  ```
+  print ("That number is positive.")
+```
 
 <blockquote>Be sure to double check indentation in your code.</blockquote>
 
