@@ -1339,8 +1339,107 @@ So now we have a function that prints our string a number of times specified by 
 <blockquote>QX: How does the sample program compare to your approach to the previous two questions? What was similar? What was different? How are you thinking different (if at all) about how to approach this type of program?</blockquote>
 
 <blockquote>QX: How would you write a program that calls the function you have created? Include code + comments.</blockquote>
+
+<blockquote><a href="https://www.w3schools.com/python/python_functions.asp">Click here</a> for more information on named functions in Python, via W3Schools.</blockquote>
+
+### Additional Functions Considerations
+
+#### Fruitful Versus Void Functions
+
+Functions that yield a result are considered fruitful.
+- Key term: *fruitful function(s)*
+
+To output a result, a function uses the return statement to pass results back to the function call.
+
+Functions that perform a computation but do not yield a result are considered void.
+- Key term: *void function(s)*
+
+By default, the return value for void functions is `None`.
+
+#### Parameters
+
+Inside a function, the arguments are assigned to local variables, or placeholder variables.
+
+These local variables are called parameters.
+- Key term: *parameter*
+
+#### Scoping
+
+The name of the parameter inside the function is separated or isolated from the name outside the function.
+
+This separation of namespaces is called scoping.
+- Key term: *scoping*
+
+An example of scoping:
+
+```Python
+# assign x variable
+x = 1
+
+# function definition
+def print_number(x):
+ print(x)
  
-## Additional Work With Functions
+# print x variable
+print(x)
+
+# call named function
+print_number(2)
+```
+
+In short, the placeholder variables (or parameters) we use inside the function definition are separated or isolated from any instance where a variable or parameter with the same name is used outside the function definition.
+
+<blockquote><a href="https://www.w3schools.com/python/python_scope.asp">Click here</a> to learn more about scope in Python, via W3Schools.</blockquote>
+
+#### Docstrings
+
+We can add comments to a function definition by including a docstring under the function header.
+- Key term: *docstring*
+
+As we've learned previously, single-line comments in Python are declared using the `#` symbol, and multi-line comments in Python are declared using the <code>'''</code> symbol.
+
+Docstrings are declared using triple single quotes (<code>'''</code>) or triple double quotes (`"""`).
+
+Best practice is to start the docstring just below the function header.
+
+Another best practice for docstrings is to begin with a capital letter and end with a period.
+
+The docstring should briefly describe what the function does.
+
+Let's see this in action with an example from earlier in the lab.
+
+```Python
+def printThreeTimes(string):
+ '''Prints an input string three times'''
+ for x in range(3):
+  print(string)
+```
+
+We have a couple options for accessing the contents of the docstring elesewhere in the program.
+
+We can use the `_doc_` method (underscore, doc, underscore).
+```Python
+print(Using _doc_:")
+print(printThreeTimes._doc_)
+```
+
+Or we can use the `help()` function.
+```Python
+print("Using help:")
+help(printThreeTimes)
+```
+
+Multi-line docstrings can be used to provide additional description about the named function, including information about parameters, arguments, and returns.
+
+<blockquote><a href="https://www.python.org/dev/peps/pep-0257/">Click here</a> to learn more about docstrings in Python, via Python.org documentation.</blockquote>
+
+### Why Functions
+
+By this point in the lab, your brain might be hurting. Mine is.
+
+Let's take a step back and think about *why* we would want or need to use functions in our code.
+
+### Additional Work With Functions
 
 QX: Write a function `is_even` that determines whether or not a number `n` is even. Include code + comments for the function definition as well as a sample function call.
 
