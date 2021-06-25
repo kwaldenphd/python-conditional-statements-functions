@@ -87,15 +87,15 @@ Elements of this lab procedure were adapted from materials developed by [Lindsay
 
 3. For example, we might like to execute some statements under some conditions but not others, or we might like to execute some statements multiple times. 
 
-Behold- conditional statements!
+4. Behold- conditional statements!
 
-We can use conditional statements to change the behavior of a program based on whether specific conditions are or are not met.
+5. We can use conditional statements to change the behavior of a program based on whether specific conditions are or are not met.
 
-To put this another way, conditional statements check boolean expressions (i.e. conditions), and change the behavior of the program accordingly.
+6. To put this another way, conditional statements check boolean expressions (i.e. conditions), and change the behavior of the program accordingly.
 
 ## Operator Review
 
-Operators used to compare two objects:
+7. Operators used to compare two objects:
 - `==`    equal to
 - `==`    equal to
 - `!=`    not equal to
@@ -104,18 +104,18 @@ Operators used to compare two objects:
 - `<`     less than
 - `<=`    less than or equal to
 
-Boolean logical operators:
+8. Boolean logical operators:
 - `and`   both must be true
 - `or`    one or both must be true
 - `not`   reverses the truth value
 
-We can use and test for conditions in a few key ways, specifically through `if` statements and `loops`.
+9. We can use and test for conditions in a few key ways, specifically through `if` statements and `loops`.
 
-More on loops later, but for now...
+10. More on loops later, but for now...
 
 ## `if` Statements
 
-Python's comparison operators serve as conditional tests that return a True or False.
+11. Python's comparison operators serve as conditional tests that return a True or False.
 ```Python
 #set the variable number to 10
 number = 10
@@ -151,35 +151,35 @@ print(number > 1 and number <20)
 print(number ==10 or number ==20)
 ```
 
-`if` statements use the `if` keyword to test if a condition is true.
+12. `if` statements use the `if` keyword to test if a condition is true.
 
-`if` statements are conditional, meaning that there is a test to determine if a statement is true or false, and then the computer takes some defined action.
+13. `if` statements are conditional, meaning that there is a test to determine if a statement is true or false, and then the computer takes some defined action.
 
-The basic syntax for an `if` statement:
+14. The basic syntax for an `if` statement:
 
 ```Python
 if condition:
  statement(s)
 ```
 
-The `if` statement tests if a particular condition is true. And if so, executes the command nested under the initial `if` statement.
+15. The `if` statement tests if a particular condition is true. And if so, executes the command nested under the initial `if` statement.
 
-To illustrate that another way:
+16. To illustrate that another way:
 
 ```Python
 if this condition is true:
  then do this thing
 ```
 
-A couple things to note about this syntax:
+17. A couple things to note about this syntax:
 - A colon always follows the first line of an `if` statement
 - The code that will run if the statement is true is nested or intented beneath the `if` keyword
 
-For example, let's say we have a Python program where the variable `n` equals `0`.
+18. For example, let's say we have a Python program where the variable `n` equals `0`.
 
-We want to write a program that, if `n` equals `0`, prints the message `n is zero`.
+19. We want to write a program that, if `n` equals `0`, prints the message `n is zero`.
 
-We can do that using an `if` statement.
+20. We can do that using an `if` statement.
 
 ```Python
 n = 0
@@ -188,9 +188,9 @@ if n == 0:
  print('n is zero')
 ```
 
-Let's see another `if` statement in action.
+21. Let's see another `if` statement in action.
 
-This time, we are going to ask the user for an input, and use that input in an `if` statement.
+22. This time, we are going to ask the user for an input, and use that input in an `if` statement.
 
 ```Python
 number = int(input("Enter a number: "))
@@ -200,15 +200,15 @@ if number > 0:
 
 <blockquote>Be sure to double check indentation in your code.</blockquote>
 
-See what happens when you enter different number values.
+23. See what happens when you enter different number values.
 
-If you enter a positive number, the `That number is positive` message will print. 
+24. If you enter a positive number, the `That number is positive` message will print. 
 
-If you enter a negative number or zero, no message is printed. 
+25. If you enter a negative number or zero, no message is printed. 
 
-Now let's add a second `print` statement (a message of your choosing) at the end of the program.
+26. Now let's add a second `print` statement (a message of your choosing) at the end of the program.
 
-The indentation for this second `print` statement needs to match `print("That number is positive.")` in the previous example.
+27. The indentation for this second `print` statement needs to match `print("That number is positive.")` in the previous example.
 
 ```Python
 number = int(input("Enter a number: "))
@@ -217,11 +217,11 @@ if number > 0:
   print('Second print statement goes here')
 ```
 
-How does this affect the output of your program when you enter various values?
+28. How does entering different values affect the program output?
 
-Now, let's change the indentation for the second`print` statement.
+29. Now, let's change the indentation for the second`print` statement.
 
-This time, instead of matching the `print("That number is positive.")` indentation, the second print statement will be aligned with the `if` statement.
+30. This time, instead of matching the `print("That number is positive.")` indentation, the second print statement will be aligned with the `if` statement.
 
 ```Python
 number = int(input("Enter a number: "))
@@ -232,21 +232,21 @@ if number > 0:
 print('Second print statement with modified indentation')
 ```
 
-How does this affect the program's output?
+31. How does modifying the indentation affect the program output?
 
-When python encounters an `if` statement it checks whether the associated condition (in this case, `number > 0`) is true. 
+32. When Python encounters an `if` statement it checks whether the associated condition (in this case, `number > 0`) is true. 
 
-If the condition is true, Python executes all statements that immediately follow AND are indented beneath the `if` clause. 
+33. If the condition is true, Python executes all statements that immediately follow AND are indented beneath the `if` clause. 
 
-If the condition is false, no commands indented beneath the `if` clause are skipped. 
+34. If the condition is false, no commands indented beneath the `if` clause are skipped. 
 
-In either case, execution will then continue with the next un-indented statement. 
+35. In either case, execution will then continue with the next un-indented statement. 
 
 ## `if` Statements and Strings
 
-The `if` statement and comparison operators work for comparing strings just like they do for comparing numbers.
+36. The `if` statement and comparison operators work for comparing strings just like they do for comparing numbers.
 
-Let's write a program that asks the user to enter a color name.
+37. Let's write a program that asks the user to enter a color name.
 
 ```Python
 color = input("Enter a color name")
@@ -254,15 +254,15 @@ color = input("Enter a color name")
 print("You entered the color " + color)
 ```
 
-Now, you want to use an `if` statement to print a message telling the user if the color they entered is your favorite color.
+38. Now, you want to use an `if` statement to print a message telling the user if the color they entered is your favorite color.
 
-If the color entered by the user is not your favorite color, no printed response is needed.
+39. If the color entered by the user is not your favorite color, no printed response is needed.
 
-Now, add a final line to your program that will print `Goodbye!` whenever the program ends, regardless of the color entered.
+40. Now, add a final line to your program that will print `Goodbye!` whenever the program ends, regardless of the color entered.
 
-Test your program to see if it works.
+41. Test your program to see if it works.
 
-Note- to checking whether your program works, you will have to run it at least twice, entering colors that test both possible outcomes.
+42. Note- to checking whether your program works, you will have to run it at least twice, entering colors that test both possible outcomes.
 
 <blockquote>Q3: Provide your code + comments for steps 13-18.</blockquote>
 
@@ -270,11 +270,11 @@ Note- to checking whether your program works, you will have to run it at least t
 
 ## `if-else` Statements
 
-Suppose we want to print one message when the condition (`number > 0`) is true, and a different message when the condition is false. 
+43. Suppose we want to print one message when the condition (`number > 0`) is true, and a different message when the condition is false. 
 
-We can do that by using an `else` clause along with an `if` keyword.
+44. We can do that by using an `else` clause along with an `if` keyword.
 
-The basic syntax for `if-else`:
+45. The basic syntax for `if-else`:
 
 ```Python
 if condition:
@@ -283,11 +283,11 @@ else:
  statement(s)
 ```
 
-The statement indented beneath the `if` keyword will only run when the `if` condition is true.
+46. The statement indented beneath the `if` keyword will only run when the `if` condition is true.
 
-In an `if-else` statement, the statement indented beneath `else` will only run if the `if` condition is not true (or false).
+47. In an `if-else` statement, the statement indented beneath `else` will only run if the `if` condition is not true (or false).
 
-An example that illustrates this logic:
+48. An example that illustrates this logic:
 
 ```Python
 # ask user to enter a number
@@ -311,7 +311,7 @@ print ("This message prints every time.")
 
 ## Additional Work With `if` Statements
 
-We can also test for values in a list.
+49. We can also test for values in a list.
 ```Python
 fruits = ['apple', 'pear', 'orange']
 
@@ -330,7 +330,7 @@ else:
 
 <blockquote>Q6: Explain what this program will output and why.</blockquote>
 
-We can check more than one condition using chained conditional statements (or chained conditionals).
+50. We can check more than one condition using chained conditional statements (or chained conditionals).
 - Key term: *chained conditionals*
 
 ```Python
@@ -342,7 +342,7 @@ if a > b or a > c:
  print("At least one of the conditions is True")
 ```
 
-We can also nest conditional statements inside another conditional statement.
+51. We can also nest conditional statements inside another conditional statement.
 - Key term: *nested conditionals*
 
 ```Python
@@ -356,24 +356,24 @@ if x > 10:
     print("but not above 20.") 
 ```
 
-NOTE: Python works from left to right evaluating a logical expression or conditional statement. Python stops evaluating when it finds the expression is `True` or `False` based on the conditional statement.
+52. NOTE: Python works from left to right evaluating a logical expression or conditional statement. Python stops evaluating when it finds the expression is `True` or `False` based on the conditional statement.
 
-Syntax errors will interrupt program execution.
+53. Syntax errors will interrupt program execution.
 
 <blockquote><a href="https://www.w3schools.com/python/python_conditions.asp">Click here</a> to learn more about conditional statements in Python, via W3Schools.</blockquote>
 
 # Control Flow
 
-In programming languages, control flow governs the order in which a program executes.
+54. In programming languages, control flow governs the order in which a program executes.
 
-In Python, control flow is regulated through conditional statements, loops, and function calls- all things we will be covering in this lab!
+55. In Python, control flow is regulated through conditional statements, loops, and function calls- all things we will be covering in this lab!
 
-Examples include:
+56. Examples include:
 - `if` statements
 - `for` and `while` loops
 - Functions
 
-A few examples of control flow and conditional execution in action.
+57. A few examples of control flow and conditional execution in action.
 
 ```Python
 # if statement example 
@@ -408,11 +408,11 @@ else:
  print('No')
 ```
 
-The previous section of the lab focused on the `if` and `if..else` keywords.
+58. The previous section of the lab focused on the `if` and `if..else` keywords.
 
-We can also use the `elif` keyword along with the `if` keyword to introduce a new condition. 
+59. We can also use the `elif` keyword along with the `if` keyword to introduce a new condition. 
 
-Python will test the `elif` condition if previous conditions are not true.
+60. Python will test the `elif` condition if previous conditions are not true.
 
 ```Python
 # elif statement example
@@ -474,64 +474,62 @@ if a > b or a > c:
 
 # Loops
 
-Loop statements are a type of conditional statement that rely on the underlying logic of conditional execution.
+61. Loop statements are a type of conditional statement that rely on the underlying logic of conditional execution.
 
-In Python, loops repeatedly execute a series of tasks.
+62. In Python, loops repeatedly execute a series of tasks.
 - Key term: *loop(s), looping*
 
-Each time through the body of a loop is called an iteration.
+63. Each time through the body of a loop is called an iteration.
 - Key term: *iteration*
 
-An iteration can involve things like iterating through items in a list or testing if specific conditions are met, and then doing “something” as the result or endpoint for the loop.
+64. An iteration can involve things like iterating through items in a list or testing if specific conditions are met, and then doing “something” as the result or endpoint for the loop.
 
-Loops normally contains a variable that changes within the body of the loop so that we can eventually exit the loop. 
+65. Loops normally contains a variable that changes within the body of the loop so that we can eventually exit the loop. 
 
-If a loop never exits, then this is called an infinite loop.
+66. If a loop never exits, then this is called an infinite loop.
 - Key term: *infinite loop*
 
-In short, the computer will continue to follow the loop instructions, until it can’t perform that function any longer. 
-Working with loops
-
+67. In short, the computer will continue to follow the loop instructions, until it can’t perform that function any longer. 
 
 ## `for` Loops
 
-`for` loops let us iterate through a definite set of objects.
+68. `for` loops let us iterate through a definite set of objects.
 
-In each iteration through the `for` loop, Python will:
+69. In each iteration through the `for` loop, Python will:
 - Extract one element from the dataset
 - Execute the body of the `for` loop using the item bound to the element
 - Go back to the first step
 - Keep iterating through the loop until reaching the end of the dataset
 
-The basic syntax in a `for` loop:
+70. The basic syntax in a `for` loop:
 
 ```Python
 for item in dataset:
  statement(s)
 ```
 
-In this syntax, `item` is a placeholder for each element in `dataset`. 
+71. In this syntax, `item` is a placeholder for each element in `dataset`. 
 
-You can replace `item` with another word or letter character.
+72. You can replace `item` with another word or letter character.
 
 ```Python
 for i in dataset
 ```
 
-In this syntax, `dataset` stands for the list of items we want Python to iterate over.
+73. In this syntax, `dataset` stands for the list of items we want Python to iterate over.
 
-That list of items could be a list variable, a list of numbers, a string of characters, etc.
+74. That list of items could be a list variable, a list of numbers, a string of characters, etc.
 
 ### `for` Loops and Lists of Numbers
 
-Let's say we have a list of numbers, and we want Python to iterate through each number in the list and print the number.
+75. Let's say we have a list of numbers, and we want Python to iterate through each number in the list and print the number.
 
 ```Python
 for i in [0, 1, 2, 3]:
  print(i)
 ```
 
-Alternatively, we could create a variable for our list of numbers.
+76. Alternatively, we could create a variable for our list of numbers.
 
 ```Python
 # create list of numbers
@@ -542,21 +540,21 @@ for i in number_list:
  print(i)
 ```
 
-The loop command steps through the list one value at a time. 
+77. The loop command steps through the list one value at a time. 
 
-The loop continues until it reaches the end of the list. 
+78. The loop continues until it reaches the end of the list. 
 
 ### `for` Loops and Strings
 
-We can also use a `for` loop to iterate over a list of strings.
+79. We can also use a `for` loop to iterate over a list of strings.
 
-Let's say we have a list of pepper types.
+80. Let's say we have a list of pepper types.
 
 ```Python
 peppers = ["bell", "poblano", "jalapeno", “banana”, “chile”, “cayenne”]
 ```
 
-We can use a `for` loop to iterate over each string in the list.
+81. We can use a `for` loop to iterate over each string in the list.
 
 ```Python
 peppers = ["bell", "poblano", "jalapeno", “banana”, “chile”, “cayenne”]
@@ -565,9 +563,9 @@ for x in peppers:
  print(x)
 ```
 
-We can also use a `for` loop to iterate through characters in a single string.
+82. We can also use a `for` loop to iterate through characters in a single string.
 
-Let's say we want to iterate over the characters in the string `elements`.
+83. Let's say we want to iterate over the characters in the string `elements`.
 
 ```Python
 for x in 'elements':
@@ -587,13 +585,13 @@ for x in string:
 
 #### `range()`
 
-We can use the `range()` function to generate a list of numbers.
+84. We can use the `range()` function to generate a list of numbers.
 
 ```Python
 range(0, 3)
 ```
 
-We can use the `range()` function as part of a `for` loop.
+85. We can use the `range()` function as part of a `for` loop.
 
 ```Python
 for i in range(0, 3):
@@ -602,28 +600,28 @@ for i in range(0, 3):
 
 #### `enumerate()`
 
-In a previous lab, we talked about how each item in a list has an index, or a number that indicates its position in the list.
+86. In a previous lab, we talked about how each item in a list has an index, or a number that indicates its position in the list.
 
-We can use the `enumerate()` function to generate a list of pairs containing each item in the list and its index.
+87. We can use the `enumerate()` function to generate a list of pairs containing each item in the list and its index.
 
 ```Python
 list(enumerate(['a','b','c'])
 ```
 
-We can use the `enumerate()` function as part of a `for` loop.
+88. We can use the `enumerate()` function as part of a `for` loop.
 
 ```Python
 for index, letter in enumerate('abc'):
  print(index, letter)
 ```
 
-In this last example, `for index, letter` instructed Python to iterate over both components in the `enumerate()` output.
+89. In this last example, `for index, letter` instructed Python to iterate over both components in the `enumerate()` output.
 
-`print(index, letter)` instructed Python to print both components for each element.
+90. `print(index, letter)` instructed Python to print both components for each element.
 
 ### Other `for` Loop Considerations
 
-Let's say we have a nested list, or a list that contains sub-lists.
+91. Let's say we have a nested list, or a list that contains sub-lists.
 
 ```Python
 numlist = [[0, 42], [67543, -987654]]
@@ -631,13 +629,13 @@ numlist = [[0, 42], [67543, -987654]]
 
 <blockquote>QX: What do you think will happen if we write a for loop for numlist? What would be a single element in the list?</blockquote>
 
-Remember in a nested list, or a list with sub-lists, each sub-list is an item or element in the list.
+92. Remember in a nested list, or a list with sub-lists, each sub-list is an item or element in the list.
 
 <blockquote><a href="https://www.w3schools.com/python/python_for_loops.asp">Click here</a> to learn more about <code>for</code> loops in Python, via W3Schools.</blockquote>
 
 ### `for` Loops: Putting It All Together
 
-29. Let's start combining `for` loops with some of the concepts covered in previous labs.
+93. Let's start combining `for` loops with some of the concepts covered in previous labs.
 ```Python
 #loops through a list of the members of the House Stark.
 
@@ -647,13 +645,13 @@ for character in characters:
   print(character.title() + "Stark")
 ```
 
-<blockquote>Note the use of the plural for the name of the list and the singular for the individual item is not required. We are just declaring variables here. I could have used anything to name the individual items (e.g. for person in characters). All you are doing with this step is setting a new variable for the individual item. It is standard convention to use the plural and singular terms so that the person reading the code can interpret what it is doing.</blockquote>
+<blockquote>Note the use of the plural for the name of the list and the singular for the individual item is not required. We are just declaring variables here. We can use anything to name the individual items (e.g. for person in characters). All this does is set a new variable for the individual item. Standard convention is to use the plural and singular terms so that the person reading the code can interpret what it is doing.</blockquote>
 
-30. Remember the loop command steps through the list one value at a time. The loop continues until it reaches the end of the list. 
+94. Remember the loop command steps through the list one value at a time. The loop continues until it reaches the end of the list. 
 
-31. In this case, for each item in the list called `“characters”` the program prints the value of each `“character”` in the list concatenated with the string `" Stark”`. 
+95. In this case, for each item in the list called `“characters”` the program prints the value of each `“character”` in the list concatenated with the string `" Stark”`. 
 
-32. This produces the output:
+96. This produces the output:
 ```
 Arya Stark
 Benjen Stark
@@ -665,7 +663,7 @@ Robb Stark
 Sansa Stark
 ```
 
-33. Now let's look at a different loop.
+97. Now let's look at a different loop.
 ```Python
 characters = ['Arya', ' Benjen', 'Bran', 'Catelyn', 'Eddard', 'Rickon', 'Robb', 'Sansa']
 print('Members of the House Stark:')
@@ -676,7 +674,7 @@ print(characters[0].title() + " is my favorite.")
 
 <blockquote>Q9: What do you expect this code to output? Explain how this program works in your own words.</blockquote>
 
-34. Comments that walk through each line of this program:
+98. Comments that walk through each line of this program:
 ```Python
 #this line creates the list of character names
 characters = ['Arya', ' Benjen', 'Bran', 'Catelyn', 'Eddard', 'Rickon', 'Robb', 'Sansa']
@@ -695,13 +693,13 @@ print(characters[0].title() + " is my favorite.")
 
 ### Conditional Statements and `for` Loops
 
-We can also use nested conditional statements as part of `for` loops.
+99. We can also use nested conditional statements as part of `for` loops.
 
 #### `for` Loop Example A
 
-For example, let's say we have `message = 'Hello World!'`, and we want to see in which positions the letter `l` appears.
+100. For example, let's say we have `message = 'Hello World!'`, and we want to see in which positions the letter `l` appears.
 
-Our program would need to...
+101. Our program would need to...
 - Iterate over each character in the string
 - Check to see if that character matches `l`
 - If the character matches `l`, output some kind of message that indicates the position
@@ -710,39 +708,39 @@ Our program would need to...
 
 <blockquote>QX: See where you can get with writing this program? What parts of the program were you able to get working? Where did you run into challenges?</blockquote>
 
-Here is one approach to this program.
+102. Here is one approach to this program.
 
-First, we could create a variable with our `Hello World!` string.
+103. First, we could create a variable with our `Hello World!` string.
 
 ```Python
 message = 'Hello World!'
 ```
 
-Then, we could use a `for` loop with the `enumerate()` function to access each element in the string and its index.
+104. Then, we could use a `for` loop with the `enumerate()` function to access each element in the string and its index.
 
 ```Python
 for entry in enumerate(message):
  print(entry)
 ```
 
-This gets us each character in the string and its index.
+105. This gets us each character in the string and its index.
 
-Next, we could use a conditional statement to test for equality.
+106. Next, we could use a conditional statement to test for equality.
 
 ```Python
 if entry[1] == 'l':
  print(f'Found an 'l' at position {entry[0]}')
 ```
 
-In this block of code, we are accessing the second value in the `enumerate()` output for each character in the string.
+107. In this block of code, we are accessing the second value in the `enumerate()` output for each character in the string.
 
 <blockquote>Remember: Python starts counting at zero (0).</blockquote>
 
-Each iteration through the loop tests if the `entry` character matches `l`.
+108. Each iteration through the loop tests if the `entry` character matches `l`.
 
-If the conditional statement is true, then the `print()` message will output the position index.
+109. If the conditional statement is true, then the `print()` message will output the position index.
 
-To put that all together:
+110. To put that all together:
 
 ```Python
 message = 'Hello World!'
@@ -753,24 +751,25 @@ for entry in enumerate(message):
  if entry[1] == 'l':
   print(f'Found an 'l' at position {entry[0]}')
 ```
-You can modify this code to include other messages or test for other characters.
+
+111. You can modify this code to include other messages or test for other characters.
 
 <blockquote>QX: How does the sample program compare to your approach to the previous two questions? What was similar? What was different? How are you thinking different (if at all) about how to approach this type of program?</blockquote>
 
 #### `for` Loop Example B
 
-Let's work through another example.
+112. Let's work through another example.
 
-This time, let's say we have a list of names that might be used to refer to Notre Dame's Department of Computer Science and Engineering.
+113. This time, let's say we have a list of names that might be used to refer to Notre Dame's Department of Computer Science and Engineering.
 
 ```Python
 #here is a list of names
 names=['department of computer science and engineering', 'computer science department', 'cse']
 ```
 
-We want to write a program that prints out `cse` in all upper-case letters, but prints out any other list element in title case.
+114. We want to write a program that prints out `cse` in all upper-case letters, but prints out any other list element in title case.
 
-Our program would need to...
+115. Our program would need to...
 - Iterate over each element in the list
 - Check to see if that element matches `cse`
 - If so, print out that element in upper case
@@ -780,41 +779,41 @@ Our program would need to...
 
 <blockquote>QX: See where you can get with writing this program. What parts of the program were you able to get working? Where did you run into challenges?</blockquote>
 
-Here is one approach to this program.
+116. Here is one approach to this program.
 
-First, we could use a `for` loop to iterate through each item in the list.
+117. First, we could use a `for` loop to iterate through each item in the list.
 
 ```Python
 for name in names:
  SOMETHING WILL GO HERE
 ```
 
-Then, we could use an `if` statement to test if the element equals `cse`
+118. Then, we could use an `if` statement to test if the element equals `cse`
 
 ```Python
 if name == 'cse':
  DO SOMETHING 
 ```
 
-Now remember if the element matches `cse`, we want to print the element in upper-case letters.
+119. Now remember if the element matches `cse`, we want to print the element in upper-case letters.
 
-So we could finish the `if` statement.
+120. So we could finish the `if` statement.
 
 ```Python
 if name == 'cse':
  print(name.upper())
 ```
 
-If the element does not match `cse`, we want to print the element in title-case letters.
+121. If the element does not match `cse`, we want to print the element in title-case letters.
 
-We can use an `else` statement combined with a `print()` statement.
+122. We can use an `else` statement combined with a `print()` statement.
 
 ```Python
 else:
  print(name.title())
 ```
 
-To put that all together:
+123. To put that all together:
 
 ```Python
 names=['department of computer science and engineering', 'computer science department', 'cse']
@@ -826,39 +825,41 @@ for name in names:
     print(name.title())
 ```
 
-20. This program returns the output
+124. This program returns the output
+```Python
 `Department of Computer Science and Engineering`
 `Computer Science Department`
 `CSE`
+```
 
 <blockquote>QX: How does the sample program compare to your approach to the previous two questions? What was similar? What was different? How are you thinking different (if at all) about how to approach this type of program?</blockquote>
 
 ### OPTIONAL: Additional Practice With `for` Loops
 
-Some tasks if you are wanting additional practice with `for` loops:
+125. Some tasks if you are wanting additional practice with `for` loops:
 - Sum all of the odd numbers between 0 and 100.
 - Find the smallest item in a list of numbers.
 - Simulate rolling a die until we reach a 5.
 
 ## `while` Loops
 
-35. Another way to modify the control flow of a program is to have it execute one or more statements repeatedly.
+126. Another way to modify the control flow of a program is to have it execute one or more statements repeatedly.
 
-A `while` loop will test for an initial condition and continue iterating through the loop until the condition is `False`.
+127. A `while` loop will test for an initial condition and continue iterating through the loop until the condition is `False`.
 
-In each iteration through the `while` loop, Python will:
+128. In each iteration through the `while` loop, Python will:
 - Evaluate the initial condition (which is a Boolean true/false expression)
 - If the condition is `False`, exit the loop and continue the program
 - If the condition is `True`, then execute other statements in the body of the loop and return to the beginning of the loop
 
-The basic syntax for a `while` loop:
+129. The basic syntax for a `while` loop:
 
 ```Python
 while condition:
  statement(s)
 ```
 
-To express this logic another way:
+130. To express this logic another way:
 
 ```Python
 while THIS CONDITION IS TRUE
@@ -869,7 +870,7 @@ while THIS CONDITION IS TRUE
 
 #### `while` Loop Example A
 
-Let's look at a sample `while` loop that uses the `<` (less than) comparison operator.
+131. Let's look at a sample `while` loop that uses the `<` (less than) comparison operator.
 
 ```Python
 n = 0
@@ -879,29 +880,29 @@ while n < 10:
  n = n +1
 ```
 
-Let's walk through what is happening in each line of this program.
+132. To walk through what is happening in each line of this program...
 
-`n=0` assigns the value zero (0) to the variable `n`.
+133. `n=0` assigns the value zero (0) to the variable `n`.
 
-`n < 10` is a conditional statement that will return `True` as long as `n` is less than `10`.
+134. `n < 10` is a conditional statement that will return `True` as long as `n` is less than `10`.
 
-So `while n < 10` sets up a `while` loop in which the body of the loop (the lines of code nested or indented beneath the first line of the loop) will run as long as the initial condition is `true`.
+135. So `while n < 10` sets up a `while` loop in which the body of the loop (the lines of code nested or indented beneath the first line of the loop) will run as long as the initial condition is `true`.
 
-The first line in the body of the loop `print(n)` prints the value of `n` for that iteration.
+136. The first line in the body of the loop `print(n)` prints the value of `n` for that iteration.
 
-The second line in the body of the loop `n = n+1` reassigns the value of `n` to be `n + 1`.
+137. The second line in the body of the loop `n = n+1` reassigns the value of `n` to be `n + 1`.
 
-After executing both lines in the body of the loop, the next iteration of the loop begins by evaluating the `n < 10` conditional statement.
+138. After executing both lines in the body of the loop, the next iteration of the loop begins by evaluating the `n < 10` conditional statement.
 
 <blockquote>QX: What is the value of <code>n</code> in the first iteration of the loop? What happens to the value of <code>n</code> in each iteration of the loop?</blockquote>
 
 <blockquote>QX: What is the endpoint for this loop, or when will this loop end?</blockquote>
 
-REMINDER: Loops that have no endpoint are called *infinite loops*.
+139. REMINDER: Loops that have no endpoint are called *infinite loops*.
 
 #### `while` Loop Example B
 
-Another example of a `while` loop.
+140. Another example of a `while` loop.
 
 ```Python
 # assign x variable
@@ -924,7 +925,7 @@ print('I'm done!')
 
 #### `while` Loop Example C
 
-Let's look at a `while` loop that includes strings and integers.
+141. Let's look at a `while` loop that includes strings and integers.
 
 ```Python
 count = 1
@@ -935,23 +936,24 @@ while count <= 5:
 print ("Done")
 ```
 
-On the first line (`count = 1)` we create a variable named `count` and set it equal to one. 
+142. On the first line (`count = 1)` we create a variable named `count` and set it equal to one. 
 
-The next statement (`while count <= 5:`) contains a condition `count <= 5`. 
+143. The next statement (`while count <= 5:`) contains a condition `count <= 5`. 
 
-This condition will be evaluated, and if it is true, the statements indented beneath it will be executed. 
+144. This condition will be evaluated, and if it is true, the statements indented beneath it will be executed. 
 
-Once that has happened, execution returns to the top of the `while` loop, where the condition is checked again. 
+145. Once that has happened, execution returns to the top of the `while` loop, where the condition is checked again. 
 
-This process will continue, with the indented statements being executed repeatedly as long as (i.e., `while`) the condition continues to be true. 
+146. This process will continue, with the indented statements being executed repeatedly as long as (i.e., `while`) the condition continues to be true. 
 
-If the condition is ever false when it gets checked, execution will jump to the first statement after those associated with the loop (the first un-indented statement).
+147. If the condition is ever false when it gets checked, execution will jump to the first statement after those associated with the loop (the first un-indented statement).
 
 <blockquote>QX: What will happen if you remove the statement <code>count = count + 1</code> from this program? Remove the statement to verify your prediction.</blockquote>
 
 <blockquote>QX: Modify the program from steps 35-48 so that it prints some word or phrase nine times, and also prints a line number at the beginning of each line. Answer will include code + comments.</blockquote>
 
-49. For example, your output might look like the following: 
+148. For example, your output might look like the following: 
+
 ```Python
 1 Python
 2 Python
@@ -969,17 +971,18 @@ IS FUN!
 
 #### `while` Loops and Nested Conditional Statements
 
-As with `for` loops, `while` loops let us nested conditional statements.
+149. As with `for` loops, `while` loops let us nested conditional statements.
 
-62. We can place any valid python statement within either a while-loop or an if-statement. 
+150. We can place any valid python statement within either a while-loop or an if-statement. 
 
-63. Among other things, this means that we can place loops within loops, or if-statements within if-statements. 
+151. Among other things, this means that we can place loops within loops, or if-statements within if-statements. 
 
-64. Similarly, we can place if-statements within loops, and vice-versa. This flexibility allows us to solve many complex problems.
+152. Similarly, we can place if-statements within loops, and vice-versa. This flexibility allows us to solve many complex problems.
 
-65. By placing an if-statement within a loop, we can solve problems that require us to make a given decision multiple times. 
+153. By placing an if-statement within a loop, we can solve problems that require us to make a given decision multiple times. 
 
-An example:
+154. An example:
+
 ```Python
 # assign i variable
 i = 1
@@ -999,9 +1002,9 @@ while i < 200:
 print("That's all, folks!")
 ```
 
-In this example, we have a `while` loop that includes four nested conditional statements.
+155. In this example, we have a `while` loop that includes four nested conditional statements.
 
-NOTE: `i += 10` in the last line of the `while` loop reassigns the value of `i` through an expression equivalent to `i = i + 10`.
+156. NOTE: `i += 10` in the last line of the `while` loop reassigns the value of `i` through an expression equivalent to `i = i + 10`.
 
 <blockquote>QX: Now it's your turn. Describe what is happening in each line of this program. You can use explanations for previous examples as a model.</blockquote>
 
@@ -1011,11 +1014,11 @@ NOTE: `i += 10` in the last line of the `while` loop reassigns the value of `i` 
 
 #### `break`
 
-We can exit a loop immediately by using the `break` statement.
+157. We can exit a loop immediately by using the `break` statement.
 
-`break` will stop the `while` loop even if the condition is true.
+158. `break` will stop the `while` loop even if the condition is true.
 
-For example:
+159. For example:
 
 ```Python
 # assign i variable 
@@ -1029,15 +1032,15 @@ while i < 6:
  i += 1
 ```
 
-In this example, the loop breaks as soon as the `i == 3` condition is `True`.
+160. In this example, the loop breaks as soon as the `i == 3` condition is `True`.
 
 <blockquote>QX: Describe what would happen in each iteration of this loop. How many iterations would it take for the <code>break</code> statement to come into effect?</blockquote>
 
 #### `continue`
 
-We can skip the rest of the body of a loop and move on to the next iteration using `continue`.
+161. We can skip the rest of the body of a loop and move on to the next iteration using `continue`.
 
-For example:
+162. For example:
 
 ```Python
 # assign the i variable
@@ -1051,11 +1054,11 @@ while i < 6:
  print(i)
 ```
 
-In this example, the current iteration of the loop will stop when `i == 3` is true.
+163. In this example, the current iteration of the loop will stop when `i == 3` is true.
 
-Unlike with `break`, the loop will not end.
+164. Unlike with `break`, the loop will not end.
 
-Instead when `i == 3` is true, the loop will skip over the final nested `print` statement and return to the beginning of the loop for a new iteration.
+165. Instead when `i == 3` is true, the loop will skip over the final nested `print` statement and return to the beginning of the loop for a new iteration.
 
 <blockquote>QX: Describe what would happen in each iteration of this loop. How many iterations would it take for the <code>break</code> statement to come into effect?</blockquote>
 
@@ -1063,7 +1066,7 @@ Instead when `i == 3` is true, the loop will skip over the final nested `print` 
 
 ## Additional Work With Loops
 
-The following lab notebook questions can use `for` or `while` loops, a variety of conditional statements and comparison operators, and other Python concepts covered thus far.
+166. The following lab notebook questions can use `for` or `while` loops, a variety of conditional statements and comparison operators, and other Python concepts covered thus far.
 
 QX: Write a loop that prints out all numbers from 0 to 10. Include your code + comments that document how the code works.
   
@@ -1202,28 +1205,28 @@ QX: In your own words, what is the difference between a `for` loop and a `while`
 
 # Functions
 
-In Python, a function is a named sequence of statements that performs a computation.
+166. In Python, a function is a named sequence of statements that performs a computation.
 - Key term: *function*
 
-To execute a function, we call it by name and pass it an appropriate set of input arguments.
+167. To execute a function, we call it by name and pass it an appropriate set of input arguments.
 - Key terms: *function call, input argument*
 
-A function takes zero or more arguments as inputs and returns zero or more outputs as a result.
+168. A function takes zero or more arguments as inputs and returns zero or more outputs as a result.
 
-The output or result of a function is called the return value.
+169. The output or result of a function is called the return value.
 - Key terms: *function output or return value*
 
-Data, parameters, or arguments can be passed into a function.
+170. Data, parameters, or arguments can be passed into a function.
 
-Functions can also return data.
+171. Functions can also return data.
 
 ## Built-In Functions
 
-We have actually already been working with a number of Python's built-in functions.
+172. We have actually already been working with a number of Python's built-in functions.
 
-These include `print()`, `dict()`, `input()`, `int()`, and `len()`.
+173. These include `print()`, `dict()`, `input()`, `int()`, and `len()`.
 
-We call built-in functions using the function name, followed by parenthesis.
+174. We call built-in functions using the function name, followed by parenthesis.
 - `print()`
 - `dict()`
 - `input()`
@@ -1232,17 +1235,17 @@ We call built-in functions using the function name, followed by parenthesis.
 
 ## Named Functions
 
-But Python also allows you to create (and name) your own functions.
+175. But Python also allows you to create (and name) your own functions.
 - Key term: *named function(s)*
 
-We can define or name a function using the `def` keyword.
+176. We can define or name a function using the `def` keyword.
 
-A function definition includes a few core components:
+177. A function definition includes a few core components:
 - The name of the new function
 - The list of function arguments
 - The sequence of statements to execute when the function is called
 
-The core syntax for defining your own function:
+178. The core syntax for defining your own function:
 
 ```Python
 # use def keyword to define function name
@@ -1251,41 +1254,41 @@ def function_name(argument):
  return result
 ```
 
-Let's unpack each of those components.
+179. Let's unpack each of those components.
 
-`def function_name()` is the name you are giving to the function you create- this is the header for the function definition.
+180. `def function_name()` is the name you are giving to the function you create- this is the header for the function definition.
 
-Function names have many of the same rules as variable names- no spaces or special characters.
+181. Function names have many of the same rules as variable names- no spaces or special characters.
 
-`argument` is the argument that will be passed to the function.
+182. `argument` is the argument that will be passed to the function.
 
-When we are initially defining the function, the `argument` value is typically a placeholder.
+183. When we are initially defining the function, the `argument` value is typically a placeholder.
 
-Later in the program when we call the named function, the argument being passed to the function goes in these parenthesis.
+184. Later in the program when we call the named function, the argument being passed to the function goes in these parenthesis.
 
-The nested or indented line `statement(s)` is the body of the function definition.
+185. The nested or indented line `statement(s)` is the body of the function definition.
 
-It includes a sequence of statements to execute when the function is called.
+186. It includes a sequence of statements to execute when the function is called.
 
-The nested or indented line `return result` is a placeholder for the function output or endpoint- it is also part of the body of the function definition.
+187. The nested or indented line `return result` is a placeholder for the function output or endpoint- it is also part of the body of the function definition.
 
 ### How Named Functions Work
 
-So what happens when we use the `def` keyword to create a named function?
+188. So what happens when we use the `def` keyword to create a named function?
 
-Programs are always executed sequentially, one statement at a time.
+189. Programs are always executed sequentially, one statement at a time.
 
-Function definitions create new functions, but do not execute the bodies or statements within the functions UNTIL the functions are called.
+190. Function definitions create new functions, but do not execute the bodies or statements within the functions UNTIL the functions are called.
 
-When we call a named function, the program jumps to the definition for the function being called, executes the function's body, and then returns to the point in the program where the function was called and resumes executing the program.
+191. When we call a named function, the program jumps to the definition for the function being called, executes the function's body, and then returns to the point in the program where the function was called and resumes executing the program.
 
-Let's look at some examples.
+192. Let's look at some examples.
 
 #### Named Function Examples
 
 ##### Function Example A
 
-Let's say we want to create a function that prints an input string three times.
+193. Let's say we want to create a function that prints an input string three times.
 
 ```Python
 def printThreeTimes(string):
@@ -1293,21 +1296,21 @@ def printThreeTimes(string):
   print(string)
 ```
 
-Let's walk through what is happening in this function definition.
+194. To walk through what is happening in this function definition...
 
-`def printThreeTimes(string)` assigns the function name (`printThreeTimes`).
+195. `def printThreeTimes(string)` assigns the function name (`printThreeTimes`).
 
-This is the name we will use when calling this function elsewhere in the program.
+196. This is the name we will use when calling this function elsewhere in the program.
 
-`for x in range(3)` is part of the body of the function.
+197. `for x in range(3)` is part of the body of the function.
 
-This line of code uses a `for` loop to say "for each integer value in the range leading up to but not including 3," do.....something!
+198. This line of code uses a `for` loop to say "for each integer value in the range leading up to but not including 3," do.....something!
 
-That "something" is the `print` statement nested in the `for` loop.
+199. That "something" is the `print` statement nested in the `for` loop.
 
-That `print` statement will output the `string` value each time through the `for` loop.
+200. That `print` statement will output the `string` value each time through the `for` loop.
 
-Now let's see this named function in action.
+201. Now let's see this named function in action.
 
 ```Python
 string = "There's no place like home."
@@ -1315,7 +1318,7 @@ string = "There's no place like home."
 printThreeTimes(string)
 ```
 
-We wouldn't need to assign the string to a variable- we could pass it directly to the function.
+202. We wouldn't need to assign the string to a variable- we could pass it directly to the function.
 
 ```Python
 printThreeTimes("There's no place like home.")
@@ -1323,42 +1326,42 @@ printThreeTimes("There's no place like home.")
 
 ##### Function Example B
 
-Let's look at another example.
+203. Let's look at another example.
 
-Here, we want to create a function that prints an input string a specific number of times.
+204. Here, we want to create a function that prints an input string a specific number of times.
 
 <blockquote>QX: Describe how you would start building out code to accomplish this task? What functions, statements, or keywords would you need to use? How would you start to organize this program?</blockquote>
 
 <blockquote>QX: See where you can get with writing this program. What parts of the program were you able to get working? Where did you run into challenges?</blockquote>
 
-Here is one approach to this task.
+205. Here is one approach to this task.
 
-First, we want to define the name of our function, as well as what input arguments it will take.
+206. First, we want to define the name of our function, as well as what input arguments it will take.
 
-We know that we need to pass a string to be printed AND an integer for the number of times to the named function.
+207. We know that we need to pass a string to be printed AND an integer for the number of times to the named function.
 
-For now, let's call the string `string` and the integer `times`.
+208. For now, let's call the string `string` and the integer `times`.
 
-So the function header could look like:
+209. So the function header could look like:
 ```Python
 def printNTimes(string, times):
 ```
 
-We've named the `printNTimes` function and established we will be passing two arguments to the function.
+210. We've named the `printNTimes` function and established we will be passing two arguments to the function.
 
-Next, we could us a `for` loop in combination with the `range()` function to accomplish a specific task for a specific number of iterations.
+211. Next, we could us a `for` loop in combination with the `range()` function to accomplish a specific task for a specific number of iterations.
 
 ```Python
 for x in range(times)
 ```
 
-As in the previous named function example, we can think of the `for` loop as saying "for each integer value in the range leading up to but not including the `times` value," do.....something!
+212. As in the previous named function example, we can think of the `for` loop as saying "for each integer value in the range leading up to but not including the `times` value," do.....something!
 
-That "something" is the `print` statement nested in the `for` loop.
+213. That "something" is the `print` statement nested in the `for` loop.
 
-That `print` statement will output the `string` value each time through the `for` loop.
+214. That `print` statement will output the `string` value each time through the `for` loop.
 
-Putting that all together:
+215. Putting that all together:
 
 ```Python
 def printNTimes(string, times):
@@ -1366,7 +1369,7 @@ def printNTimes(string, times):
   print(string)
 ```
 
-So now we have a function that prints our string a number of times specified by the `times` value in combination with the `range()` function.
+216. So now we have a function that prints our string a number of times specified by the `times` value in combination with the `range()` function.
 
 <blockquote>QX: How does the sample program compare to your approach to the previous two questions? What was similar? What was different? How are you thinking different (if at all) about how to approach this type of program?</blockquote>
 
@@ -1378,31 +1381,31 @@ So now we have a function that prints our string a number of times specified by 
 
 #### Fruitful Versus Void Functions
 
-Functions that yield a result are considered fruitful.
+217. Functions that yield a result are considered fruitful.
 - Key term: *fruitful function(s)*
 
-To output a result, a function uses the return statement to pass results back to the function call.
+218. To output a result, a function uses the return statement to pass results back to the function call.
 
-Functions that perform a computation but do not yield a result are considered void.
+219. Functions that perform a computation but do not yield a result are considered void.
 - Key term: *void function(s)*
 
-By default, the return value for void functions is `None`.
+220. By default, the return value for void functions is `None`.
 
 #### Parameters
 
-Inside a function, the arguments are assigned to local variables, or placeholder variables.
+221. Inside a function, the arguments are assigned to local variables, or placeholder variables.
 
-These local variables are called parameters.
+222. These local variables are called parameters.
 - Key term: *parameter*
 
 #### Scoping
 
-The name of the parameter inside the function is separated or isolated from the name outside the function.
+223. The name of the parameter inside the function is separated or isolated from the name outside the function.
 
-This separation of namespaces is called scoping.
+224. This separation of namespaces is called scoping.
 - Key term: *scoping*
 
-An example of scoping:
+225. An example of scoping:
 
 ```Python
 # assign x variable
@@ -1419,26 +1422,26 @@ print(x)
 print_number(2)
 ```
 
-In short, the placeholder variables (or parameters) we use inside the function definition are separated or isolated from any instance where a variable or parameter with the same name is used outside the function definition.
+226. In short, the placeholder variables (or parameters) we use inside the function definition are separated or isolated from any instance where a variable or parameter with the same name is used outside the function definition.
 
 <blockquote><a href="https://www.w3schools.com/python/python_scope.asp">Click here</a> to learn more about scope in Python, via W3Schools.</blockquote>
 
 #### Docstrings
 
-We can add comments to a function definition by including a docstring under the function header.
+227. We can add comments to a function definition by including a docstring under the function header.
 - Key term: *docstring*
 
-As we've learned previously, single-line comments in Python are declared using the `#` symbol, and multi-line comments in Python are declared using the <code>'''</code> symbol.
+228. As we've learned previously, single-line comments in Python are declared using the `#` symbol, and multi-line comments in Python are declared using the <code>'''</code> symbol.
 
-Docstrings are declared using triple single quotes (<code>'''</code>) or triple double quotes (`"""`).
+229. Docstrings are declared using triple single quotes (<code>'''</code>) or triple double quotes (`"""`).
 
-Best practice is to start the docstring just below the function header.
+230. Best practice is to start the docstring just below the function header.
 
-Another best practice for docstrings is to begin with a capital letter and end with a period.
+231. Another best practice for docstrings is to begin with a capital letter and end with a period.
 
-The docstring should briefly describe what the function does.
+232. The docstring should briefly describe what the function does.
 
-Let's see this in action with an example from earlier in the lab.
+233. Let's see this in action with an example from earlier in the lab.
 
 ```Python
 def printThreeTimes(string):
@@ -1447,43 +1450,43 @@ def printThreeTimes(string):
   print(string)
 ```
 
-We have a couple options for accessing the contents of the docstring elesewhere in the program.
+234. We have a couple options for accessing the contents of the docstring elesewhere in the program.
 
-We can use the `_doc_` method (underscore, doc, underscore).
+235. We can use the `_doc_` method (underscore, doc, underscore).
 ```Python
 print(Using _doc_:")
 print(printThreeTimes._doc_)
 ```
 
-Or we can use the `help()` function.
+236. Or we can use the `help()` function.
 ```Python
 print("Using help:")
 help(printThreeTimes)
 ```
 
-Multi-line docstrings can be used to provide additional description about the named function, including information about parameters, arguments, and returns.
+237. Multi-line docstrings can be used to provide additional description about the named function, including information about parameters, arguments, and returns.
 
 <blockquote><a href="https://www.python.org/dev/peps/pep-0257/">Click here</a> to learn more about docstrings in Python, via Python.org documentation.</blockquote>
 
 ## Why Functions
 
-By this point in the lab, your brain might be hurting. Mine is.
+238. By this point in the lab, your brain might be hurting. Mine is.
 
-Let's take a step back and think about *why* we would want or need to use functions in our code.
+239. Let's take a step back and think about *why* we would want or need to use functions in our code.
 
 <p align="center"><a href="https://github.com/kwaldenphd/python-conditional-statements-functions/blob/main/Python_Function_Meme.png?raw=true"><img class="aligncenter" src="https://github.com/kwaldenphd/python-conditional-statements-functions/blob/main/Python_Function_Meme.png?raw=true" /></a></p>
 
-Python functions can help with programming tasks in a number of key ways.
+240. Python functions can help with programming tasks in a number of key ways.
 
-They help yield **more concise code*** by eliminating the need to write out code for the same task multiple times.
+241. They help yield **more concise code*** by eliminating the need to write out code for the same task multiple times.
 
-In doing so, they also **improve code readability**.
+242. In doing so, they also **improve code readability**.
 
-Functions also help us **more effectively test and debug code**.
+243. Functions also help us **more effectively test and debug code**.
 
-Again, because we are creating reusable pieces or building blocks of code, we can more readily pinpoint where things are going wrong or not working in our code.
+244. Again, because we are creating reusable pieces or building blocks of code, we can more readily pinpoint where things are going wrong or not working in our code.
 
-By allowing us to define and call functions for common tasks, they **promote code reuse and modularity**.
+245. By allowing us to define and call functions for common tasks, they **promote code reuse and modularity**.
 
 ## Additional Work With Functions
 
