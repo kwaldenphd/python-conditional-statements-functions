@@ -1439,7 +1439,7 @@ By this point in the lab, your brain might be hurting. Mine is.
 
 Let's take a step back and think about *why* we would want or need to use functions in our code.
 
-IMAGE PLACEHOLDER
+<p align="center"><a href="https://github.com/kwaldenphd/python-conditional-statements-functions/blob/main/Python_Function_Meme.png?raw=true"><img class="aligncenter" src="https://github.com/kwaldenphd/python-conditional-statements-functions/blob/main/Python_Function_Meme.png?raw=true" /></a></p>
 
 Python functions can help with programming tasks in a number of key ways.
 
