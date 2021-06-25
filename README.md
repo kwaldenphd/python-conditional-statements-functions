@@ -1,4 +1,4 @@
-# Conditional Statements in Python
+# Conditional Statements and Functions in Python
 
 <a href="http://creativecommons.org/licenses/by-nc/4.0/" rel="license"><img style="border-width: 0;" src="https://i.creativecommons.org/l/by-nc/4.0/88x31.png" alt="Creative Commons License" /></a>
 This tutorial is licensed under a <a href="http://creativecommons.org/licenses/by-nc/4.0/" rel="license">Creative Commons Attribution-NonCommercial 4.0 International License</a>.
@@ -1438,6 +1438,20 @@ Multi-line docstrings can be used to provide additional description about the na
 By this point in the lab, your brain might be hurting. Mine is.
 
 Let's take a step back and think about *why* we would want or need to use functions in our code.
+
+IMAGE PLACEHOLDER
+
+Python functions can help with programming tasks in a number of key ways.
+
+They help yield **more concise code*** by eliminating the need to write out code for the same task multiple times.
+
+In doing so, they also **improve code readability**.
+
+Functions also help us **more effectively test and debug code**.
+
+Again, because we are creating reusable pieces or building blocks of code, we can more readily pinpoint where things are going wrong or not working in our code.
+
+By allowing us to define and call functions for common tasks, they **promote code reuse and modularity**.
 
 ### Additional Work With Functions
 
