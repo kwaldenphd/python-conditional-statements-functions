@@ -750,7 +750,7 @@ Our program would need to...
 
 <blockquote>QX: Describe how you would start building out code to accomplish this task? What functions, statements, or keywords would you need to use? How would you start to organize this program?</blockquote>
 
-<blockquote>QX: See where you can get with writing this program? What parts of the program were you able to get working? Where did you run into challenges?</blockquote>
+<blockquote>QX: See where you can get with writing this program. What parts of the program were you able to get working? Where did you run into challenges?</blockquote>
 
 Here is one approach to this program.
 
@@ -805,15 +805,97 @@ for name in names:
 
 <blockquote>QX: How does the sample program compare to your approach to the previous two questions? What was similar? What was different? How are you thinking different (if at all) about how to approach this type of program?</blockquote>
 
+### OPTIONAL: Additional Practice With Loops
 
+Some tasks if you are wanting additional practice with `for` loops:
+- Sum all of the odd numbers between 0 and 100.
+- Find the smallest item in a list of numbers.
+- Simulate rolling a die until we reach a 5.
 
 # `while` loops
 
 35. Another way to modify the control flow of a program is to have it execute one or more statements repeatedly.
 
-36. Run the following program and see what happens. 
+A `while` loop will test for an initial condition and continue iterating through the loop until the condition is `False`.
 
-37. You should find that it prints both "Notre" and "Dame" five times, and then it prints "Done" once.
+In each iteration through the `while` loop, Python will:
+- Evaluate the initial condition (which is a Boolean true/false expression)
+- If the condition is `False`, exit the loop and continue the program
+- If the condition is `True`, then execute other statements in the body of the loop and return to the beginning of the loop
+
+The basic syntax for a `while` loop:
+
+```Python
+while condition:
+ statement(s)
+```
+
+To express this logic another way:
+
+```Python
+while THIS CONDITION IS TRUE
+ DO THIS THING
+```
+
+### Example A
+
+Let's look at a sample `while` loop that uses the `<` (less than) comparison operator.
+
+```Python
+n = 0
+
+while n < 10:
+ print(n)
+ n = n +1
+```
+
+Let's walk through what is happening in each line of this program.
+
+`n=0` assigns the value zero (0) to the variable `n`.
+
+`n < 10` is a conditional statement that will return `True` as long as `n` is less than `10`.
+
+So `while n < 10` sets up a `while` loop in which the body of the loop (the lines of code nested or indented beneath the first line of the loop) will run as long as the initial condition is `true`.
+
+The first line in the body of the loop `print(n)` prints the value of `n` for that iteration.
+
+The second line in the body of the loop `n = n+1` reassigns the value of `n` to be `n + 1`.
+
+After executing both lines in the body of the loop, the next iteration of the loop begins by evaluating the `n < 10` conditional statement.
+
+<blockquote>QX: What is the value of <code>n</code> in the first iteration of the loop? What happens to the value of <code>n</code> in each iteration of the loop?</blockquote>
+
+<blockquote>QX: What is the endpoint for this loop, or when will this loop end?</blockquote>
+
+REMINDER: Loops that have no endpoint are called *infinite loops*.
+
+### Example B
+
+Another example of a `while` loop.
+
+```Python
+# assign x variable
+x = 10
+
+# looping structure using greater than or equal to conditional statement
+while x >= 0:
+ print(x)
+ x = x-1
+
+# message to print once loop has completed
+print('I'm done!')
+```
+
+<blockquote>QX: Now it's your turn. Describe what is happening in each line of this program. You can use the explanations for the previous example as a model.</blockquote>
+
+<blockquote>QX: What is the value of <code>x</code> in the first iteration of the loop? What happens to the value of <code>x</code> in each iteration of the loop?</blockquote>
+
+<blockquote>QX: What is the endpoint for this loop, or when will this loop end?</blockquote>
+
+### Example C
+
+Let's look at a `while` loop that includes strings and integers.
+
 ```Python
 count = 1
 while count <= 5:
@@ -823,27 +905,21 @@ while count <= 5:
 print ("Done")
 ```
 
-38. Now let's walk through the program to understand how it works. 
+On the first line (`count = 1)` we create a variable named `count` and set it equal to one. 
 
-39. On the first line (`count = 1)` we create a variable named `count` and set it equal to one. 
+The next statement (`while count <= 5:`) contains a condition `count <= 5`. 
 
-40. The next statement (`while count <= 5:`) contains a condition `count <= 5`. 
+This condition will be evaluated, and if it is true, the statements indented beneath it will be executed. 
 
-41. This condition will be evaluated, and if it is true, the statements indented beneath it will be executed. 
+Once that has happened, execution returns to the top of the `while` loop, where the condition is checked again. 
 
-42. Once that has happened, execution returns to the top of the `while` loop, where the condition is checked again. 
+This process will continue, with the indented statements being executed repeatedly as long as (i.e., `while`) the condition continues to be true. 
 
-43. This process will continue, with the indented statements being executed repeatedly as long as (i.e., `while`) the condition continues to be true. 
+If the condition is ever false when it gets checked, execution will jump to the first statement after those associated with the loop (the first un-indented statement).
 
-44. If the condition is ever false when it gets checked, execution will jump to the first statement after those associated with the loop (the first un-indented statement).
+<blockquote>QX: What will happen if you remove the statement <code>count = count + 1</code> from this program? Remove the statement to verify your prediction.</blockquote>
 
-45. The careful reader will notice that it is important for something about the condition to change on each pass through the loop. 
-
-47. Predict what will happen if you remove the statement `count = count + 1`. Remove the statement to verify your prediction.
-
-48. If all went "well", you should have discovered what we call an infinite loop. This means your program will continue running forever, unless you stop it from outside. 
-
-<blockquote>Q10: Modify the program from steps 35-48 so that it prints some word or phrase nine times, and also prints a line number at the beginning of each line. Answer will include code + comments.</blockquote>
+<blockquote>QX: Modify the program from steps 35-48 so that it prints some word or phrase nine times, and also prints a line number at the beginning of each line. Answer will include code + comments.</blockquote>
 
 49. For example, your output might look like the following: 
 ```Python
@@ -859,15 +935,109 @@ print ("Done")
 IS FUN!
 ```
 
-<blockquote>Q11: In your own words, what is iteration?</blockquote>
+### Additional `while` loop considerations
 
-<blockquote>Q12: In your own words, what is the difference between a <code>while</code> loop and a <code>for</code> loop?</blockquote>
+#### `while` loops and nested conditional statements
 
-## Additional work with loops
+As with `for` loops, `while` loops let us nested conditional statements.
 
-<blockquote>Q13: Write a loop that prints out all numbers from 0 to 10. Include your code + comments that document how the code works.</blockquote>
+62. We can place any valid python statement within either a while-loop or an if-statement. 
+
+63. Among other things, this means that we can place loops within loops, or if-statements within if-statements. 
+
+64. Similarly, we can place if-statements within loops, and vice-versa. This flexibility allows us to solve many complex problems.
+
+65. By placing an if-statement within a loop, we can solve problems that require us to make a given decision multiple times. 
+
+An example:
+```Python
+# assign i variable
+i = 1
+
+# while loop
+while i < 200:
+ if i > 150:
+  print('Expression value is greater than 150')
+ elif i > 100:
+  print('Expression value is greater than 100')
+ elif i > 50:
+  print('Expression value is greater than 50')
+ elif i < 50:
+  print('Expression value is less than 50')
+ i += 10
+
+print("That's all, folks!")
+```
+
+In this example, we have a `while` loop that includes four nested conditional statements.
+
+NOTE: `i += 10` in the last line of the `while` loop reassigns the value of `i` through an expression equivalent to `i = i + 10`.
+
+<blockquote>QX: Now it's your turn. Describe what is happening in each line of this program. You can use explanations for previous examples as a model.</blockquote>
+
+<blockquote>QX: What is the value of <code>i</code> in the first iteration of the loop? What happens to the value of <code>i</code> in each iteration of the loop?</blockquote>
+
+<blockquote>QX: What is the endpoint for this loop, or when will this loop end?</blockquote>
+
+### `break`
+
+We can exit a loop immediately by using the `break` statement.
+
+`break` will stop the `while` loop even if the condition is true.
+
+For example:
+
+```Python
+# assign i variable 
+i = 1
+
+# while loop
+while i < 6:
+ print(i)
+ if i == 3:
+  break
+ i += 1
+```
+
+In this example, the loop breaks as soon as the `i == 3` condition is `True`.
+
+<blockquote>QX: Describe what would happen in each iteration of this loop. How many iterations would it take for the <code>break</code> statement to come into effect?</blockquote>
+
+### `continue`
+
+We can skip the rest of the body of a loop and move on to the next iteration using `continue`.
+
+For example:
+
+```Python
+# assign the i variable
+i = 0
+
+# while loop
+while i < 6:
+ i += 1
+ if i ==3:
+  continue
+ print(i)
+```
+
+In this example, the current iteration of the loop will stop when `i == 3` is true.
+
+Unlike with `break`, the loop will not end.
+
+Instead when `i == 3` is true, the loop will skip over the final nested `print` statement and return to the beginning of the loop for a new iteration.
+
+<blockquote>QX: Describe what would happen in each iteration of this loop. How many iterations would it take for the <code>break</code> statement to come into effect?</blockquote>
+
+<blockquote>QX: What is the endpoint for this loop, or when will this loop end?</blockquote>
+
+## Additional Work With Loops
+
+The following lab notebook questions can use `for` or `while` loops, a variety of conditional statements and comparison operators, and other Python concepts covered thus far.
+
+QX: Write a loop that prints out all numbers from 0 to 10. Include your code + comments that document how the code works.
   
-50. Convert the following Python code to use a while loop instead of a for loop.
+QX: Convert the following Python code to use a while loop instead of a for loop. Include your modified code with comments.
 ```Python
 numbers = [5, 4, 7, 0, 1]
 count   = 0
@@ -879,30 +1049,10 @@ for number in numbers:
 
 print(count)
 ```
-<blockquote>Q14: Include your modified code for step 50, including commments that document what changes you made.</blockquote>
 
-51. The Python code below is suppose to determine if the given list of numbers is sorted. That is, it should return True if each item in the list is less than the next item. 
+QX: Write a program that prints a list of the first nine positive integers and their squares. Include code + comments.
 
-52. Unfortunately, there are a few errors in the code below. 
-
-53. Identify the errors and fix the code.
-```Python
-is_sorted([1, 2, 3, 4, 2])
-
-def is_sorted(numbers):
-    ''' Return whether or not the list of numbers is sorted '''
-    for i in range(len(numbers) - 1):
-        if numbers[i] > numbers[i + 1]:
-            return False
-    return True
-```
-<blockquote>Q15: Include your modified code for steps 51-53, including commments that document what changes you made to address the errors.</blockquote>
-
-54. Write a program that prints a list of the first nine positive integers and their squares. 
-
-55. Once again, be careful to include the colon at the end of the while statement, or Python will complain.
-
-56. Your output should look similar to the following:
+Your output should look similar to the following:
 ```Python
 Number Square
 1        1
@@ -916,11 +1066,9 @@ Number Square
 9        81
 ```
 
-<blockquote>Q16: Include your program for steps 54-56, including commments that document what the code is doing.</blockquote>
+QX: Write a program that counts from 10 down to 1, and then prints "Blastoff!" 
 
-57. Write a program that counts from 10 down to 1, and then prints "Blastoff!" 
-
-58. Your output should look like this:
+Your output should similar to the following:
 ```Python
 10
 9
@@ -934,11 +1082,9 @@ Number Square
 1
 Blastoff!
 ```
-<blockquote>Q17: Include your program for steps 57-58, including commments that document what the code is doing.</blockquote>
 
-59. Write a program that asks the user to enter three numbers: a starting value, an ending value, and an increment. 
+QX: Write a program that asks the user to enter three numbers: a starting value, an ending value, and an increment. Your program should then "count" based on these criteria, as shown in the sample output below. Include code + comments.
 
-60. Your program should then "count" based on these criteria, as shown in the example below.
 ```Python
 This program counts for you.
 Enter the starting value: 3
@@ -952,26 +1098,7 @@ Enter the increment: 2
 13
 ```
 
-<blockquote>Q18: Include your program for steps 59-60, including commments that document what the code is doing.</blockquote>
-
-### Additional practice with loops (optional)
-
-61. Use programs that use `for` loops to accomplish the following tasks:
-- Sum all of the odd numbers between 0 and 100.
-- Find the smallest item in a list of numbers.
-- Simulate rolling a die until we reach a 5.
-
-## Nesting within loops
-
-62. We can place any valid python statement within either a while-loop or an if-statement. 
-
-63. Among other things, this means that we can place loops within loops, or if-statements within if-statements. 
-
-64. Similarly, we can place if-statements within loops, and vice-versa. This flexibility allows us to solve many complex problems.
-
-65. By placing an if-statement within a loop, we can solve problems that require us to make a given decision multiple times. 
-
-66. Write a program that uses a while-loop to print the output shown below. 
+QX: Write a program that uses a while-loop to print the output shown below. Include code + comments.
 ```Python
 1
 2
@@ -986,18 +1113,14 @@ happy
 10
 ```
 
-67. As you can see, the program should print the numbers 1 through 10, except that between 7 and 8 it should print the word "happy". 
+The program should print the numbers 1 through 10, except that between 7 and 8 it should print the word "happy". 68. This can be accomplished by placing an if-statement within the while-loop to do something special for the lineNumber == 7 case.
 
-68. This can be accomplished by placing an if-statement within the while-loop to do something special for the lineNumber == 7 case.
-
-<blockquote>Q19: Include your program for steps 65-68, including commments that document what the code is doing.</blockquote>
-
-69. Write a program that plays a familiar guessing game.
+QX: Write a program that plays a familiar guessing game.
 - First your program will set some number to be the "correct answer"
 - Then your program will ask the user to guess this answer until they get it right. 
 - For each guess your program should give a hint based on whether the guess was too high or too low.
 
-70. For example, a session with your program may look like the following:
+For example, the output for a session with your program may look like the following:
 ```Python
 Enter your guess: 46
 Your guess is too low
@@ -1015,16 +1138,14 @@ Enter your guess: 82
 CORRECT! You Win!
 ```
 
-71. Things to consider:
+Things to consider:
 - Begin your program with a line similar to: answer = 82. In a real game we would want to begin with a random number, but for today let's pick a single number that will always be the correct answer.
 - This program will require a loop with some if-statements inside it.
 - Each time through the loop, you must accept a new guess from the user. This can be done by using the function input inside the loop.
 
-<blockquote>Q20: Include your program for steps 69-71, including commments that document what the code is doing.</blockquote>
+QX: Write a program that reads in three strings and prints them out in alphabetical order. Include code + comments.
 
-72. Write a program that reads in three strings and prints them out in alphabetical order. 
-
-74. For example:
+Sample output for this program:
 ```Python
 Enter a word: hello
 Enter a word: goodbye
@@ -1032,7 +1153,7 @@ Enter a word: zebra
 In alphabetical order: goodbye hello zebra
 ```
 
-75. Things to consider:
+Things to consider:
 - String comparisons, such as word1 < word2, work by comparing the ASCII values of the characters in the two strings. This means that word1 will be considered "less than" word2 if it comes first alphabetically. (Well almost. The ordering can be surprising if we compare capital letters to lower-case letters because all ASCII codes for capitals precede all codes for lower-case letters. I suggest you only enter lower-case words when running your program.)
 - Be sure to test your program using a variety of words in different orders. How many different combinations do you need to test to know that your program is correct? 
 - This problem only requires if-statements, but your condition will need to be more complex than we have used before. A compound condition is one that includes multiple parts. Here are two examples. You may find that something similar will be useful in this program.
@@ -1044,39 +1165,211 @@ if number > 2 and number < 10:
 if word1 > word2 and word2 > word 3:
   **do something interesting here**
 ```
-<blockquote>Q21: Include your program for steps 72-75, including commments that document what the code is doing.</blockquote>
 
-# Working with functions
+QX: In your own words, what is iteration?
 
-<blockquote>Q22: In your own words, what is a function?</blockquote>
+QX: In your own words, what is the difference between a `for` loop and a `while` loop?
 
-<blockquote>Q23: How do we create a function?</blockquote>
+# Functions
 
-<blockquote>Q24: In your own words, what is an argument or parameter?</blockquote>
+In Python, a function is a named sequence of statements that performs a computation.
+- Key term: *function*
 
-<blockquote>Q25: In you own words, what is a return value?</blockquote>
+To execute a function, we call it by name and pass it an appropriate set of input arguments.
+- Key terms: *function call, input argument*
 
-<blockquote>Q26: Why would we use functions?</blockquote>
+A function takes zero or more arguments as inputs and returns zero or more outputs as a result.
 
-76. Function syntax:
+The output or result of a function is called the return value.
+- Key terms: *function output or return value*
+
+Data, parameters, or arguments can be passed into a function.
+
+Functions can also return data.
+
+## Built-In Functions
+
+We have actually already been working with a number of Python's built-in functions.
+
+These include `print()`, `dict()`, `input()`, `int()`, and `len()`.
+
+We call built-in functions using the function name, followed by parenthesis.
+- `print()`
+- `dict()`
+- `input()`
+- `int()`
+- `len()`
+
+## Named Functions
+
+But Python also allows you to create (and name) your own functions.
+- Key term: *named function(s)*
+
+We can define or name a function using the `def` keyword.
+
+A function definition includes a few core components:
+- The name of the new function
+- The list of function arguments
+- The sequence of statements to execute when the function is called
+
+The core syntax for defining your own function:
+
 ```Python
-def function_name(arguments):
-    statement(s)
-    return result
- ```
- 
-77. We've already worked with a number of Python's built in named-functions, like `print()`, `dict()`, `input()`, `int()`, and `len()` in previous labs.
-
-78. We define or name a function using the def keyword.
-```Python
-def my_function()
+# use def keyword to define function name
+def function_name(argument):
+ statement(s)
+ return result
 ```
 
-<blockquote>Q27: Write a function <code>is_even</code> that determines whether or not a number <code>n</code> is even. Answer includes your code + comments.</blockquote>
+Let's unpack each of those components.
 
-<blockquote>Q28: Write a function <code>average</code> that determines the average value of a list. Answer includes your code + comments.</blockquote>
+`def function_name()` is the name you are giving to the function you create- this is the header for the function definition.
 
-<blockquote>Q29: Write a function <code>uniq</code> that takes a list and returns a new list containing only unique values.</blockquote>
+Function names have many of the same rules as variable names- no spaces or special characters.
+
+`argument` is the argument that will be passed to the function.
+
+When we are initially defining the function, the `argument` value is typically a placeholder.
+
+Later in the program when we call the named function, the argument being passed to the function goes in these parenthesis.
+
+The nested or indented line `statement(s)` is the body of the function definition.
+
+It includes a sequence of statements to execute when the function is called.
+
+The nested or indented line `return result` is a placeholder for the function output or endpoint- it is also part of the body of the function definition.
+
+### How Named Functions Work
+
+So what happens when we use the `def` keyword to create a named function?
+
+Programs are always executed sequentially, one statement at a time.
+
+Function definitions create new functions, but do not execute the bodies or statements within the functions UNTIL the functions are called.
+
+When we call a named function, the program jumps to the definition for the function being called, executes the function's body, and then returns to the point in the program where the function was called and resumes executing the program.
+
+Let's look at some examples.
+
+#### Example A
+
+Let's say we want to create a function that prints an input string three times.
+
+```Python
+def printThreeTimes(string):
+ for x in range(3):
+  print(string)
+```
+
+Let's walk through what is happening in this function definition.
+
+`def printThreeTimes(string)` assigns the function name (`printThreeTimes`).
+
+This is the name we will use when calling this function elsewhere in the program.
+
+`for x in range(3)` is part of the body of the function.
+
+This line of code uses a `for` loop to say "for each integer value in the range leading up to but not including 3," do.....something!
+
+That "something" is the `print` statement nested in the `for` loop.
+
+That `print` statement will output the `string` value each time through the `for` loop.
+
+Now let's see this named function in action.
+
+```Python
+string = "There's no place like home."
+
+printThreeTimes(string)
+```
+
+We wouldn't need to assign the string to a variable- we could pass it directly to the function.
+
+```Python
+printThreeTimes("There's no place like home.")
+```
+
+#### Example B
+
+Let's look at another example.
+
+Here, we want to create a function that prints an input string a specific number of times.
+
+<blockquote>QX: Describe how you would start building out code to accomplish this task? What functions, statements, or keywords would you need to use? How would you start to organize this program?</blockquote>
+
+<blockquote>QX: See where you can get with writing this program. What parts of the program were you able to get working? Where did you run into challenges?</blockquote>
+
+Here is one approach to this task.
+
+First, we want to define the name of our function, as well as what input arguments it will take.
+
+We know that we need to pass a string to be printed AND an integer for the number of times to the named function.
+
+For now, let's call the string `string` and the integer `times`.
+
+So the function header could look like:
+```Python
+def printNTimes(string, times):
+```
+
+We've named the `printNTimes` function and established we will be passing two arguments to the function.
+
+Next, we could us a `for` loop in combination with the `range()` function to accomplish a specific task for a specific number of iterations.
+
+```Python
+for x in range(times)
+```
+
+As in the previous named function example, we can think of the `for` loop as saying "for each integer value in the range leading up to but not including the `times` value," do.....something!
+
+That "something" is the `print` statement nested in the `for` loop.
+
+That `print` statement will output the `string` value each time through the `for` loop.
+
+Putting that all together:
+
+```Python
+def printNTimes(string, times):
+ for x in range(times):
+  print(string)
+```
+
+So now we have a function that prints our string a number of times specified by the `times` value in combination with the `range()` function.
+
+<blockquote>QX: How does the sample program compare to your approach to the previous two questions? What was similar? What was different? How are you thinking different (if at all) about how to approach this type of program?</blockquote>
+
+<blockquote>QX: How would you write a program that calls the function you have created? Include code + comments.</blockquote>
+ 
+## Additional Work With Functions
+
+QX: Write a function `is_even` that determines whether or not a number `n` is even. Include code + comments for the function definition as well as a sample function call.
+
+QX: Write a function `average` that determines the average value of a list. Include code + comments for the function definition as well as a sample function call.
+
+QX: Write a function `uniq` that takes a list and returns a new list containing only unique values. Include code + comments for the function definition as well as a sample function call.
+
+QX: The Python code below is suppose to create a function that determines if the given list of numbers is sorted. That is, the function should return `True` if each item in the list is less than the next item. Unfortunately, there are a few errors in the code below. Identify the errors and fix the code. Include your modified code with comments that document what changes you made to address the errors.
+
+```Python
+is_sorted([1, 2, 3, 4, 2])
+
+def is_sorted(numbers):
+    ''' Return whether or not the list of numbers is sorted '''
+    for i in range(len(numbers) - 1):
+        if numbers[i] > numbers[i + 1]:
+            return False
+    return True
+```
+
+QX: In your own words, what is a function?
+
+QX: In your own words, how do we create a function?
+
+QX: In your own words, what is an argument or parameter?
+
+QX: In your own words, what is a return value?
+
+QX: Why would we use functions?
 
 # Lab Notebook Questions
 
