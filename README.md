@@ -1,4 +1,4 @@
-# Lab #7: Conditional Statements in Python
+# Conditional Statements in Python
 
 <a href="http://creativecommons.org/licenses/by-nc/4.0/" rel="license"><img style="border-width: 0;" src="https://i.creativecommons.org/l/by-nc/4.0/88x31.png" alt="Creative Commons License" /></a>
 This tutorial is licensed under a <a href="http://creativecommons.org/licenses/by-nc/4.0/" rel="license">Creative Commons Attribution-NonCommercial 4.0 International License</a>.
@@ -49,13 +49,21 @@ Elements of this lab procedure were adapted from materials developed by [Lindsay
 - [Lab Notebook Questions](#lab-notebook-questions)
 
 
-# Conditional execution and `if` statements
+# Conditional Statements
 
-<blockquote>Q1: In your own words, what is a boolean/logical expression?</blockquote>
+1. So far, all the programs we have written work by executing each statement in the program in order, from top to bottom. 
 
-<blockquote>Q2: In your words, what is as conditional statement (or conditional execution)?</blockquote>
+2. To write programs that solve more complex problems, we need mechanisms that will allow statements to be executed in more complex ways. 
 
-## Review of logical conditions
+3. For example, we might like to execute some statements under some conditions but not others, or we might like to execute some statements multiple times. 
+
+Behold- conditional statements!
+
+We can use conditional statements to change the behavior of a program based on whether specific conditions are or are not met.
+
+To put this another way, conditional statements check boolean expressions (i.e. conditions), and change the behavior of the program accordingly.
+
+## Operator Review
 
 Operators used to compare two objects:
 - `==`    equal to
@@ -71,101 +79,13 @@ Boolean logical operators:
 - `or`    one or both must be true
 - `not`   reverses the truth value
 
-## Working with `if` statements
+We can use and test for conditions in a few key ways, specifically through `if` statements and `loops`.
 
-1. So far, all the programs we have written work by executing each statement in the program in order, from top to bottom. 
+More on loops later, but for now...
 
-2. To write programs that solve more complex problems, we need mechanisms that will allow statements to be executed in more complex ways. 
+## `if` statements
 
-3. For example, we might like to execute some statements under some conditions but not others, or we might like to execute some statements multiple times. 
-
-4. Copy the following program and run it a few times, entering different numbers each time. 
-```Python
-number = int(input("Enter a number: "))
-if number > 0:
-  print ("That number is positive.")
-```
-
-<blockquote>Be sure to double check indentation in your code.</blockquote>
-
-5. You should find that if you enter a positive number, a message is printed to that regard. But if you enter a negative number or zero, no message is printed. 
-
-6. Now add a second print statement (with any message you want) at the end of the program, being careful to indent it by the same amount the first print statement is indented. 
-
-7. How does this affect the output of your program when you enter various values?
-
-8. Now try removing the indentation from the second print statement. (In other words, leave the first print statement where it is, but move the second one back to be aligned with the if.) 
-
-9. How does this affect the program's output?
-
-10. If all went well, you should have discovered that when python encounters an if statement it checks whether the associated condition (in this case, number > 0) is true. 
-
-11. If it is, python executes all statements that immediately follow the if clause and are indented beneath it. If the condition is false, these statements are skipped. In either case, execution will then continue with the next un-indented statement. 
-
-## `if` statements and strings
-
-12. The if statement and relational operators work for comparing strings just like they do for comparing numbers.
-
-13. Write a program that asks the user to enter a color name. 
-
-14. If the color entered happens to be your favorite color, print a message to that effect. 
-
-15. Otherwise, do not print any response. (Be very careful with punctuation in this program. The if clause must end with a colon, or python will complain.) 
-
-16. Notice that to check whether your program works correctly, you will now have to run it at least twice, entering colors that test both outcomes.
-
-17. Now add one statement to your program that will cause it to print "Goodbye!" just before it ends, regardless of the color entered. 
-
-18. Test your program to make sure it works. 
-
-<blockquote>Q3: Provide your code + comments for steps 13-18.</blockquote>
-
-<blockquote>Q4: Describe how you approached writing the program for Q3.</blockquote>
-
-## Conditional statements and `if`
-
-19. If-then statements are another common computer function. If statements are conditional, meaning that there is a test to determine if a statement is true or false and then the computer takes some defined action.
-```Python
-#here is a list of names
-names=['department of computer science and engineering', 'computer science department', 'cse']
-
-#here is a loop. I am telling Python to look at each of the items in this list
-for name in names:
-
-  #this indent tells Python that this next action is part of the loop
-  #this is my if statement. Note that like a loop it ends in a colon (:)
-  #the double == is an equality operator. It's a boolean test (returns TRUE or FALSE)
-  if name == 'cse':
-
-    #if the value is equal to cs, then the conditional statement returns TRUE and the value is printed in all upper case letters
-    print(name.upper())
-
-  #the else statement gives the set of instructions for a FALSE value. Notice that it is indented same as the if statement.
-  else:
-
-    #All other values that are not 'cs' are printed as Titles
-    print(name.title())
-```
-
-20. This program returns the output
-`Department of Computer Science and Engineering`
-`Computer Science Department`
-`CSE`
-
-21. This program without the comments:
-```Python
-names=['department of computer science and engineering', 'computer science department', 'cse']
-
-for name in names:
-  if name == 'cse':
-    print(name.upper())
-  else:
-    print(name.title())
-```
-
-<blockquote>Q5: Did the program return the results that you expected? Explain the output in your own words.</blockquote>
-
-22. Python uses a variety of Boolean Operators – these are the conditional tests that return a True or False.
+Python's comparison operators serve as conditional tests that return a True or False.
 ```Python
 #set the variable number to 10
 number = 10
@@ -201,7 +121,167 @@ print(number > 1 and number <20)
 print(number ==10 or number ==20)
 ```
 
-23. We can also test for values in a list.
+`if` statements use the `if` keyword to test if a condition is true.
+
+`if` statements are conditional, meaning that there is a test to determine if a statement is true or false, and then the computer takes some defined action.
+
+The basic syntax for an `if` statement:
+
+```Python
+if condition:
+ statement(s)
+```
+
+The `if` statement tests if a particular condition is true. And if so, executes the command nested under the initial `if` statement.
+
+To illustrate that another way:
+
+```Python
+if this condition is true:
+ then do this thing
+```
+
+A couple things to note about this syntax:
+- A colon always follows the first line of an `if` statement
+- The code that will run if the statement is true is nested or intented beneath the `if` keyword
+
+For example, let's say we have a Python program where the variable `n` equals `0`.
+
+We want to write a program that, if `n` equals `0`, prints the message `n is zero`.
+
+We can do that using an `if` statement.
+
+```Python
+n = 0
+
+if n == 0:
+ print('n is zero')
+```
+
+Let's see another `if` statement in action.
+
+This time, we are going to ask the user for an input, and use that input in an `if` statement.
+
+```Python
+number = int(input("Enter a number: "))
+if number > 0:
+  print("That number is positive.")
+```
+
+<blockquote>Be sure to double check indentation in your code.</blockquote>
+
+See what happens when you enter different number values.
+
+If you enter a positive number, the `That number is positive` message will print. 
+
+If you enter a negative number or zero, no message is printed. 
+
+Now let's add a second `print` statement (a message of your choosing) at the end of the program.
+
+The indentation for this second `print` statement needs to match `print("That number is positive.")` in the previous example.
+
+```Python
+number = int(input("Enter a number: "))
+if number > 0:
+  print("That number is positive.")
+  print('Second print statement goes here')
+```
+
+How does this affect the output of your program when you enter various values?
+
+Now, let's change the indentation for the second`print` statement.
+
+This time, instead of matching the `print("That number is positive.")` indentation, the second print statement will be aligned with the `if` statement.
+
+```Python
+number = int(input("Enter a number: "))
+
+if number > 0:
+  print("That number is positive.")
+
+print('Second print statement with modified indentation')
+```
+
+How does this affect the program's output?
+
+When python encounters an `if` statement it checks whether the associated condition (in this case, `number > 0`) is true. 
+
+If the condition is true, Python executes all statements that immediately follow AND are indented beneath the `if` clause. 
+
+If the condition is false, no commands indented beneath the `if` clause are skipped. 
+
+In either case, execution will then continue with the next un-indented statement. 
+
+## `if` statements and strings
+
+The `if` statement and comparison operators work for comparing strings just like they do for comparing numbers.
+
+Let's write a program that asks the user to enter a color name.
+
+```Python
+color = input("Enter a color name")
+
+print("You entered the color " + color)
+```
+
+Now, you want to use an `if` statement to print a message telling the user if the color they entered is your favorite color.
+
+If the color entered by the user is not your favorite color, no printed response is needed.
+
+Now, add a final line to your program that will print `Goodbye!` whenever the program ends, regardless of the color entered.
+
+Test your program to see if it works.
+
+Note- to checking whether your program works, you will have to run it at least twice, entering colors that test both possible outcomes.
+
+<blockquote>Q3: Provide your code + comments for steps 13-18.</blockquote>
+
+<blockquote>Q4: Describe how you approached writing the program for Q3.</blockquote>
+
+## `if-else` statements
+
+Suppose we want to print one message when the condition (`number > 0`) is true, and a different message when the condition is false. 
+
+We can do that by using an `else` clause along with an `if` keyword.
+
+The basic syntax for `if-else`:
+
+```Python
+if condition:
+ statement(s)
+else:
+ statement(s)
+```
+
+The statement indented beneath the `if` keyword will only run when the `if` condition is true.
+
+In an `if-else` statement, the statement indented beneath `else` will only run if the `if` condition is not true (or false).
+
+An example that illustrates this logic:
+
+```Python
+# ask user to enter a number
+number = input("Enter a number: ")
+
+# test if number is greater than zero
+if number > 0:
+  print ("That number is positive.")
+
+# if number is not greater than zero
+else:
+  print ("Definitely NOT positive.")
+
+# message that prints at end of program
+print ("This message prints every time.")
+```
+
+<blockquote>Q7: Modify the program included above to test for different conditions and output different messages. Include comments that describe what the code is doing.</blockquote>
+
+<blockquote>Q8: Return to your Q3 program and modify so it prints one message if the user enters your favorite color, and a different message if not. In addition, your program should print a final message for every user, regardless of what they entered. Answer will include your modified code + comments that explain/describe what the code is doing.</blockquote>
+
+## Additional Work With `if` Statements
+
+We can also test for values in a list.
 ```Python
 fruits = ['apple', 'pear', 'orange']
 
@@ -220,28 +300,149 @@ else:
 
 <blockquote>Q6: Explain what this program will output and why.</blockquote>
 
-## Additional work with if statements
 
-24. Suppose we want to print one message when the condition (number > 0) is true, and a different message when the condition is false. 
 
-25. We can do that by adding an else clause as shown below. 
-
-26. Modify the following code and test your program. 
-
-<blockquote>Again, you must be careful to include the colon after else.</blockquote>
+We can check more than one condition using chained conditional statements (or chained conditionals).
+- Key term: *chained conditionals*
 
 ```Python
-number = input("Enter a number: ")
-if number > 0:
-  print ("That number is positive.")
-else:
-  print ("Definitely NOT positive.")
-print ("This message prints every time.")
+a = 200
+b = 33
+c = 500
+
+if a > b or a > c:
+ print("At least one of the conditions is True")
 ```
 
-<blockquote>Q7: Include your modified code for step 26, including comments that describe what the code is doing.</blockquote>
+We can also nest conditional statements inside another conditional statement.
+- Key term: *nested conditionals*
 
-<blockquote>Q8: Return to your Q3 program and modify so it prints one message if the user enters your favorite color, and a different message if not. In addition, your program should print a final message for every user, regardless of what they entered. Answer will include your modified code + comments that explain/describe what the code is doing.</blockquote>
+```Python
+x = 41
+
+if x > 10:
+  print("Above ten,")
+  if x > 20:
+    print("and also above 20!")
+  else:
+    print("but not above 20.") 
+```
+
+NOTE: Python works from left to right evaluating a logical expression or conditional statement. Python stops evaluating when it finds the expression is `True` or `False` based on the conditional statement.
+
+Syntax errors will interrupt program execution.
+
+<blockquote><a href="https://www.w3schools.com/python/python_conditions.asp">Click here</a> to learn more about conditional statements in Python, via W3Schools.</blockquote>
+
+# Control Flow
+
+In programming languages, control flow governs the order in which a program executes.
+
+In Python, control flow is regulated through conditional statements, loops, and function calls- all things we will be covering in this lab!
+
+Examples include:
+- `if` statements
+- `for` and `while` loops
+- Functions
+
+A few examples of control and conditional execution in action.
+
+```Python
+# if statement example 
+
+# declares a variable
+a = 2019
+
+# declares b variable
+b = 2000
+
+# ‘if’ conditional statement that compares the two variables and prints the output if the condition is met    
+if b > a:
+ print("b is greater than a")
+```
+
+```Python
+# if..else statement example
+
+# declares x variable
+x = .01
+
+# reassigns x variable
+x = x + .01
+
+# reassigns x variable a second time
+x = x * 50
+
+# conditional statement using if--else
+if x == 1:
+ print('Yes')
+else:
+ print('No')
+```
+
+The previous section of the lab focused on the `if` and `if..else` keywords.
+
+We can also use the `elif` keyword along with the `if` keyword to introduce a new condition. 
+
+Python will test the `elif` condition if previous conditions are not true.
+
+```Python
+# elif statement example
+
+# declares x variable
+x = 1
+
+# block of code that runs if x is less than 0
+if x < 0:
+ print("x is less than 0")
+
+# block of code that runs if x equals zero
+elif x == 0:
+ print("x is equal to 0")
+
+# block of code that runs if x is greater than 0
+else:
+ print("x is greater than 0")
+```
+
+```Python
+# another elif example
+
+# assign a variable 
+a = 33
+
+# assign b variable 
+b = 33
+
+# conditional statement using if
+if b > 1:
+ print("b is greater than a")
+ 
+# conditional statment using elif to test, only when if statement is false
+elif a == b:
+ print("a and b are equal")
+```
+
+```Python
+# example using chained conditional statements
+
+# assign a variable
+a = 2020
+
+# assign b variable
+b = 2019
+
+# assign c variable
+c = 2018
+
+# chained conditional statements using and
+if a > b and c > a:
+ print("Both conditions are True")
+ 
+# chained conditional statements using or
+if a > b or a > c:
+ print("At least one of these conditions is true")
+```  
 
 # Working with loops
 
@@ -545,6 +746,50 @@ if word1 > word2 and word2 > word 3:
   **do something interesting here**
 ```
 <blockquote>Q21: Include your program for steps 72-75, including commments that document what the code is doing.</blockquote>
+
+## THIS GOES SOMEWHERE ELSE
+
+Conditional statements and `if`
+
+```Python
+#here is a list of names
+names=['department of computer science and engineering', 'computer science department', 'cse']
+
+#here is a loop. I am telling Python to look at each of the items in this list
+for name in names:
+
+  #this indent tells Python that this next action is part of the loop
+  #this is my if statement. Note that like a loop it ends in a colon (:)
+  #the double == is an equality operator. It's a boolean test (returns TRUE or FALSE)
+  if name == 'cse':
+
+    #if the value is equal to cs, then the conditional statement returns TRUE and the value is printed in all upper case letters
+    print(name.upper())
+
+  #the else statement gives the set of instructions for a FALSE value. Notice that it is indented same as the if statement.
+  else:
+
+    #All other values that are not 'cs' are printed as Titles
+    print(name.title())
+```
+
+20. This program returns the output
+`Department of Computer Science and Engineering`
+`Computer Science Department`
+`CSE`
+
+21. This program without the comments:
+```Python
+names=['department of computer science and engineering', 'computer science department', 'cse']
+
+for name in names:
+  if name == 'cse':
+    print(name.upper())
+  else:
+    print(name.title())
+```
+
+<blockquote>Q5: Did the program return the results that you expected? Explain the output in your own words.</blockquote>
 
 # Working with functions
 
