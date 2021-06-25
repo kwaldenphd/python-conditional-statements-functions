@@ -33,21 +33,51 @@ Elements of this lab procedure were adapted from materials developed by [Lindsay
 
 # Table of Contents
 
-- [Conditional execution and `if` statements](#conditional-execution-and-if-statements)
-  * [Review of logical conditions](#review-of-logical-conditions)
-  * [Working with `if` statements](#working-with-if-statements)
-  * [`if` statements and strings](#if-statements-and-strings)
-  * [Conditional statements and `if`](#conditional-statements-and-if)
-  * [Additional work with `if` statements](#additional-work-with-if-statements)
-- [Working with loops](#working-with-loops)
-  * [`for` loops](#for-loops)
-  * [`while` loops](#while-loops)
-  * [Additional work with loops](#additional-work-with-loops)
-    * [Additional practice with loops (optional)](#additional-practice-with-loops-optional)
-  * [Nesting within loops](#nesting-within-loops)
-- [Working with functions](#working-with-functions)
+- [Conditional Statements](#conditional-statements)
+  * [Operator Review](#operator-review)
+  * [`'if` Statements](#if-statements)
+  * [`if` Statements and Strings](#if-statements-and-strings)
+  * [`if-else` Statements](#if-else-statements)
+  * [Additional Work With `if` Statements](#additional-work-with-if-statements)
+- [Control Flow](#control-flow)
+- [Loops](#loops)
+  * [`for` Loops](#for-loops)
+    * [`for` Loops and Lists of Numbers](#for-loops-and-lists-of-numbers)
+    * [`for` Loops and Strings](#for-loops-and-strings)
+    * [Other `for` Loop Functions](#other-for-loop-functions)
+      * [`range()`](#range)
+      * [`enumerate()`](#enumerate)
+    * [Other `for` Loop Considerations](#other-for-loop-considerations)
+    * [`for` Loops: Putting It All Together](#for-loops-putting-it-all-together)
+    * [Conditional Statements and `for` Loops](#conditional-statements-and-for-loops)
+      * [`for` Loop Example A](#for-loop-example-a)
+      * [`for` Loop Example B](#for-loop-example-b)
+    * [OPTIONAL: Additional Practice With `For` Loops](#optional-additional-practice-with-for-loops)
+  * [`while` Loops](#while-loops)
+    * [`while` Loop Examples](#while-loop-examples)
+      * [`while` Loop Example A](#while-loop-example-a)
+      * [`while` Loop Example B](#while-loop-example-b)
+      * [`while` Loop Example C](#while-loop-example-c)
+    * [Additional `while` Loop Considerations](#additional-while-loop-considerations)
+      * [`while` Loops and Nested Conditional Statements](#while-loops-and-nested-conditional-statements)
+      * [`break`](#break)
+      * [`continue`](#continue)
+  * [Additional Work With Loops](#additional-work-with-loops)
+- [Functions](#functions)
+  * [Built-In Functions](#built-in-functions)
+  * [Named Functions](#named-functions)
+    * [How Named Functions Work](#how-named-functions-work)
+    * [Name Function Examples](#named-function-examples)
+      * [Function Example A](#function-example-a)
+      * [Function Example B](#function-example-b)
+    * [Additional Function Considerations](#additional-function-considerations)
+      * [Fruitful Versus Void Functions](#fruitful-versus-void-functions)
+      * [Parameters](#parameters)
+      * [Scoping](#scoping)
+      * [Docstrings](#docstrings)
+  * [Why Functions](#why-functions)
+  * [Additional Work With Functions](#additional-work-with-functions)
 - [Lab Notebook Questions](#lab-notebook-questions)
-
 
 # Conditional Statements
 
@@ -83,7 +113,7 @@ We can use and test for conditions in a few key ways, specifically through `if` 
 
 More on loops later, but for now...
 
-## `if` statements
+## `if` Statements
 
 Python's comparison operators serve as conditional tests that return a True or False.
 ```Python
@@ -212,7 +242,7 @@ If the condition is false, no commands indented beneath the `if` clause are skip
 
 In either case, execution will then continue with the next un-indented statement. 
 
-## `if` statements and strings
+## `if` Statements and Strings
 
 The `if` statement and comparison operators work for comparing strings just like they do for comparing numbers.
 
@@ -238,7 +268,7 @@ Note- to checking whether your program works, you will have to run it at least t
 
 <blockquote>Q4: Describe how you approached writing the program for Q3.</blockquote>
 
-## `if-else` statements
+## `if-else` Statements
 
 Suppose we want to print one message when the condition (`number > 0`) is true, and a different message when the condition is false. 
 
@@ -300,8 +330,6 @@ else:
 
 <blockquote>Q6: Explain what this program will output and why.</blockquote>
 
-
-
 We can check more than one condition using chained conditional statements (or chained conditionals).
 - Key term: *chained conditionals*
 
@@ -345,7 +373,7 @@ Examples include:
 - `for` and `while` loops
 - Functions
 
-A few examples of control and conditional execution in action.
+A few examples of control flow and conditional execution in action.
 
 ```Python
 # if statement example 
@@ -465,7 +493,7 @@ In short, the computer will continue to follow the loop instructions, until it c
 Working with loops
 
 
-## `for` loops
+## `for` Loops
 
 `for` loops let us iterate through a definite set of objects.
 
@@ -494,7 +522,7 @@ In this syntax, `dataset` stands for the list of items we want Python to iterate
 
 That list of items could be a list variable, a list of numbers, a string of characters, etc.
 
-### `for` loops and lists of numbers
+### `for` Loops and Lists of Numbers
 
 Let's say we have a list of numbers, and we want Python to iterate through each number in the list and print the number.
 
@@ -518,7 +546,7 @@ The loop command steps through the list one value at a time.
 
 The loop continues until it reaches the end of the list. 
 
-### `for` loops and strings
+### `for` Loops and Strings
 
 We can also use a `for` loop to iterate over a list of strings.
 
@@ -555,7 +583,7 @@ for x in string:
  print(x)
 ```
 
-### Other functions that can be used with `for` loops
+### Other `for` Loop Functions
 
 #### `range()`
 
@@ -593,7 +621,7 @@ In this last example, `for index, letter` instructed Python to iterate over both
 
 `print(index, letter)` instructed Python to print both components for each element.
 
-### Other `for` loop considerations
+### Other `for` Loop Considerations
 
 Let's say we have a nested list, or a list that contains sub-lists.
 
@@ -607,7 +635,7 @@ Remember in a nested list, or a list with sub-lists, each sub-list is an item or
 
 <blockquote><a href="https://www.w3schools.com/python/python_for_loops.asp">Click here</a> to learn more about <code>for</code> loops in Python, via W3Schools.</blockquote>
 
-### `for` loops: putting it all together
+### `for` Loops: Putting It All Together
 
 29. Let's start combining `for` loops with some of the concepts covered in previous labs.
 ```Python
@@ -665,11 +693,11 @@ for character in characters:
 print(characters[0].title() + " is my favorite.")
 ```
 
-### Conditional statements and `for` loops
+### Conditional Statements and `for` Loops
 
 We can also use nested conditional statements as part of `for` loops.
 
-#### Example A
+#### `for` Loop Example A
 
 For example, let's say we have `message = 'Hello World!'`, and we want to see in which positions the letter `l` appears.
 
@@ -729,7 +757,7 @@ You can modify this code to include other messages or test for other characters.
 
 <blockquote>QX: How does the sample program compare to your approach to the previous two questions? What was similar? What was different? How are you thinking different (if at all) about how to approach this type of program?</blockquote>
 
-#### Example B
+#### `for` Loop Example B
 
 Let's work through another example.
 
@@ -805,14 +833,14 @@ for name in names:
 
 <blockquote>QX: How does the sample program compare to your approach to the previous two questions? What was similar? What was different? How are you thinking different (if at all) about how to approach this type of program?</blockquote>
 
-### OPTIONAL: Additional Practice With Loops
+### OPTIONAL: Additional Practice With `for` Loops
 
 Some tasks if you are wanting additional practice with `for` loops:
 - Sum all of the odd numbers between 0 and 100.
 - Find the smallest item in a list of numbers.
 - Simulate rolling a die until we reach a 5.
 
-# `while` loops
+## `while` Loops
 
 35. Another way to modify the control flow of a program is to have it execute one or more statements repeatedly.
 
@@ -837,7 +865,9 @@ while THIS CONDITION IS TRUE
  DO THIS THING
 ```
 
-### Example A
+### `while` Loop Examples
+
+#### `while` Loop Example A
 
 Let's look at a sample `while` loop that uses the `<` (less than) comparison operator.
 
@@ -869,7 +899,7 @@ After executing both lines in the body of the loop, the next iteration of the lo
 
 REMINDER: Loops that have no endpoint are called *infinite loops*.
 
-### Example B
+#### `while` Loop Example B
 
 Another example of a `while` loop.
 
@@ -892,7 +922,7 @@ print('I'm done!')
 
 <blockquote>QX: What is the endpoint for this loop, or when will this loop end?</blockquote>
 
-### Example C
+#### `while` Loop Example C
 
 Let's look at a `while` loop that includes strings and integers.
 
@@ -935,9 +965,9 @@ If the condition is ever false when it gets checked, execution will jump to the 
 IS FUN!
 ```
 
-### Additional `while` loop considerations
+### Additional `while` Loop Considerations
 
-#### `while` loops and nested conditional statements
+#### `while` Loops and Nested Conditional Statements
 
 As with `for` loops, `while` loops let us nested conditional statements.
 
@@ -979,7 +1009,7 @@ NOTE: `i += 10` in the last line of the `while` loop reassigns the value of `i` 
 
 <blockquote>QX: What is the endpoint for this loop, or when will this loop end?</blockquote>
 
-### `break`
+#### `break`
 
 We can exit a loop immediately by using the `break` statement.
 
@@ -1003,7 +1033,7 @@ In this example, the loop breaks as soon as the `i == 3` condition is `True`.
 
 <blockquote>QX: Describe what would happen in each iteration of this loop. How many iterations would it take for the <code>break</code> statement to come into effect?</blockquote>
 
-### `continue`
+#### `continue`
 
 We can skip the rest of the body of a loop and move on to the next iteration using `continue`.
 
@@ -1251,7 +1281,9 @@ When we call a named function, the program jumps to the definition for the funct
 
 Let's look at some examples.
 
-#### Example A
+#### Named Function Examples
+
+##### Function Example A
 
 Let's say we want to create a function that prints an input string three times.
 
@@ -1289,7 +1321,7 @@ We wouldn't need to assign the string to a variable- we could pass it directly t
 printThreeTimes("There's no place like home.")
 ```
 
-#### Example B
+##### Function Example B
 
 Let's look at another example.
 
@@ -1433,7 +1465,7 @@ Multi-line docstrings can be used to provide additional description about the na
 
 <blockquote><a href="https://www.python.org/dev/peps/pep-0257/">Click here</a> to learn more about docstrings in Python, via Python.org documentation.</blockquote>
 
-### Why Functions
+## Why Functions
 
 By this point in the lab, your brain might be hurting. Mine is.
 
@@ -1453,7 +1485,7 @@ Again, because we are creating reusable pieces or building blocks of code, we ca
 
 By allowing us to define and call functions for common tasks, they **promote code reuse and modularity**.
 
-### Additional Work With Functions
+## Additional Work With Functions
 
 QX: Write a function `is_even` that determines whether or not a number `n` is even. Include code + comments for the function definition as well as a sample function call.
 
