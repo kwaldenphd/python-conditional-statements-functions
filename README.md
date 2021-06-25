@@ -444,15 +444,172 @@ if a > b or a > c:
  print("At least one of these conditions is true")
 ```  
 
-# Working with loops
+# Loops
 
-27. Loops are one of the most common computer functions. 
+Loop statements are a type of conditional statement that rely on the underlying logic of conditional execution.
 
-28. In a loop, the computer will continue to follow the instructions, until it can’t perform that function any longer. 
+In Python, loops repeatedly execute a series of tasks.
+- Key term: *loop(s), looping*
+
+Each time through the body of a loop is called an iteration.
+- Key term: *iteration*
+
+An iteration can involve things like iterating through items in a list or testing if specific conditions are met, and then doing “something” as the result or endpoint for the loop.
+
+Loops normally contains a variable that changes within the body of the loop so that we can eventually exit the loop. 
+
+If a loop never exits, then this is called an infinite loop.
+- Key term: *infinite loop*
+
+In short, the computer will continue to follow the loop instructions, until it can’t perform that function any longer. 
+Working with loops
+
 
 ## `for` loops
 
-29. We’ll use a list to write our first loop.
+`for` loops let us iterate through a definite set of objects.
+
+In each iteration through the `for` loop, Python will:
+- Extract one element from the dataset
+- Execute the body of the `for` loop using the item bound to the element
+- Go back to the first step
+- Keep iterating through the loop until reaching the end of the dataset
+
+The basic syntax in a `for` loop:
+
+```Python
+for item in dataset:
+ statement(s)
+```
+
+In this syntax, `item` is a placeholder for each element in `dataset`. 
+
+You can replace `item` with another word or letter character.
+
+```Python
+for i in dataset
+```
+
+In this syntax, `dataset` stands for the list of items we want Python to iterate over.
+
+That list of items could be a list variable, a list of numbers, a string of characters, etc.
+
+### `for` loops and lists of numbers
+
+Let's say we have a list of numbers, and we want Python to iterate through each number in the list and print the number.
+
+```Python
+for i in [0, 1, 2, 3]:
+ print(i)
+```
+
+Alternatively, we could create a variable for our list of numbers.
+
+```Python
+# create list of numbers
+number_list = [0, 1, 2, 3]
+
+# for loop
+for i in number_list:
+ print(i)
+```
+
+The loop command steps through the list one value at a time. 
+
+The loop continues until it reaches the end of the list. 
+
+### `for` loops and strings
+
+We can also use a `for` loop to iterate over a list of strings.
+
+Let's say we have a list of pepper types.
+
+```Python
+peppers = ["bell", "poblano", "jalapeno", “banana”, “chile”, “cayenne”]
+```
+
+We can use a `for` loop to iterate over each string in the list.
+
+```Python
+peppers = ["bell", "poblano", "jalapeno", “banana”, “chile”, “cayenne”]
+
+for x in peppers:
+ print(x)
+```
+
+We can also use a `for` loop to iterate through characters in a single string.
+
+Let's say we want to iterate over the characters in the string `elements`.
+
+```Python
+for x in 'elements':
+ print(x)
+```
+
+```Python
+# another example of iterating over characters in a string
+
+string = 'elements'
+
+for x in string:
+ print(x)
+```
+
+### Other functions that can be used with `for` loops
+
+#### `range()`
+
+We can use the `range()` function to generate a list of numbers.
+
+```Python
+range(0, 3)
+```
+
+We can use the `range()` function as part of a `for` loop.
+
+```Python
+for i in range(0, 3):
+ print(i)
+```
+
+#### `enumerate()`
+
+In a previous lab, we talked about how each item in a list has an index, or a number that indicates its position in the list.
+
+We can use the `enumerate()` function to generate a list of pairs containing each item in the list and its index.
+
+```Python
+list(enumerate(['a','b','c'])
+```
+
+We can use the `enumerate()` function as part of a `for` loop.
+
+```Python
+for index, letter in enumerate('abc'):
+ print(index, letter)
+```
+
+In this last example, `for index, letter` instructed Python to iterate over both components in the `enumerate()` output.
+
+`print(index, letter)` instructed Python to print both components for each element.
+
+### Other `for` loop considerations
+
+Let's say we have a nested list, or a list that contains sub-lists.
+
+```Python
+numlist = [[0, 42], [67543, -987654]]
+```
+
+<blockquote>QX: What do you think will happen if we write a for loop for numlist? What would be a single element in the list?</blockquote>
+
+Remember in a nested list, or a list with sub-lists, each sub-list is an item or element in the list.
+
+<blockquote><a href="https://www.w3schools.com/python/python_for_loops.asp">Click here</a> to learn more about <code>for</code> loops in Python, via W3Schools.</blockquote>
+
+### `for` loops: putting it all together
+
+29. Let's start combining `for` loops with some of the concepts covered in previous labs.
 ```Python
 #loops through a list of the members of the House Stark.
 
@@ -464,7 +621,7 @@ for character in characters:
 
 <blockquote>Note the use of the plural for the name of the list and the singular for the individual item is not required. We are just declaring variables here. I could have used anything to name the individual items (e.g. for person in characters). All you are doing with this step is setting a new variable for the individual item. It is standard convention to use the plural and singular terms so that the person reading the code can interpret what it is doing.</blockquote>
 
-30. The loop command steps through the list one value at a time. The loop continues until it reaches the end of the list. 
+30. Remember the loop command steps through the list one value at a time. The loop continues until it reaches the end of the list. 
 
 31. In this case, for each item in the list called `“characters”` the program prints the value of each `“character”` in the list concatenated with the string `" Stark”`. 
 
@@ -507,6 +664,148 @@ for character in characters:
 #this line is not indented, so it is executed after the loop is complete.  
 print(characters[0].title() + " is my favorite.")
 ```
+
+### Conditional statements and `for` loops
+
+We can also use nested conditional statements as part of `for` loops.
+
+#### Example A
+
+For example, let's say we have `message = 'Hello World!'`, and we want to see in which positions the letter `l` appears.
+
+Our program would need to...
+- Iterate over each character in the string
+- Check to see if that character matches `l`
+- If the character matches `l`, output some kind of message that indicates the position
+
+<blockquote>QX: Describe how you would start building out code to accomplish this task? What functions, statements, or keywords would you need to use? How would you start to organize this program?</blockquote>
+
+<blockquote>QX: See where you can get with writing this program? What parts of the program were you able to get working? Where did you run into challenges?</blockquote>
+
+Here is one approach to this program.
+
+First, we could create a variable with our `Hello World!` string.
+
+```Python
+message = 'Hello World!'
+```
+
+Then, we could use a `for` loop with the `enumerate()` function to access each element in the string and its index.
+
+```Python
+for entry in enumerate(message):
+ print(entry)
+```
+
+This gets us each character in the string and its index.
+
+Next, we could use a conditional statement to test for equality.
+
+```Python
+if entry[1] == 'l':
+ print(f'Found an 'l' at position {entry[0]}')
+```
+
+In this block of code, we are accessing the second value in the `enumerate()` output for each character in the string.
+
+<blockquote>Remember: Python starts counting at zero (0).</blockquote>
+
+Each iteration through the loop tests if the `entry` character matches `l`.
+
+If the conditional statement is true, then the `print()` message will output the position index.
+
+To put that all together:
+
+```Python
+message = 'Hello World!'
+
+for entry in enumerate(message):
+ print(entry)
+ 
+ if entry[1] == 'l':
+  print(f'Found an 'l' at position {entry[0]}')
+```
+You can modify this code to include other messages or test for other characters.
+
+<blockquote>QX: How does the sample program compare to your approach to the previous two questions? What was similar? What was different? How are you thinking different (if at all) about how to approach this type of program?</blockquote>
+
+#### Example B
+
+Let's work through another example.
+
+This time, let's say we have a list of names that might be used to refer to Notre Dame's Department of Computer Science and Engineering.
+
+```Python
+#here is a list of names
+names=['department of computer science and engineering', 'computer science department', 'cse']
+```
+
+We want to write a program that prints out `cse` in all upper-case letters, but prints out any other list element in title case.
+
+Our program would need to...
+- Iterate over each element in the list
+- Check to see if that element matches `cse`
+- If so, print out that element in upper case
+- Otherwise, print out that element in title case
+
+<blockquote>QX: Describe how you would start building out code to accomplish this task? What functions, statements, or keywords would you need to use? How would you start to organize this program?</blockquote>
+
+<blockquote>QX: See where you can get with writing this program? What parts of the program were you able to get working? Where did you run into challenges?</blockquote>
+
+Here is one approach to this program.
+
+First, we could use a `for` loop to iterate through each item in the list.
+
+```Python
+for name in names:
+ SOMETHING WILL GO HERE
+```
+
+Then, we could use an `if` statement to test if the element equals `cse`
+
+```Python
+if name == 'cse':
+ DO SOMETHING 
+```
+
+Now remember if the element matches `cse`, we want to print the element in upper-case letters.
+
+So we could finish the `if` statement.
+
+```Python
+if name == 'cse':
+ print(name.upper())
+```
+
+If the element does not match `cse`, we want to print the element in title-case letters.
+
+We can use an `else` statement combined with a `print()` statement.
+
+```Python
+else:
+ print(name.title())
+```
+
+To put that all together:
+
+```Python
+names=['department of computer science and engineering', 'computer science department', 'cse']
+
+for name in names:
+  if name == 'cse':
+    print(name.upper())
+  else:
+    print(name.title())
+```
+
+20. This program returns the output
+`Department of Computer Science and Engineering`
+`Computer Science Department`
+`CSE`
+
+<blockquote>QX: How does the sample program compare to your approach to the previous two questions? What was similar? What was different? How are you thinking different (if at all) about how to approach this type of program?</blockquote>
+
+
 
 # `while` loops
 
@@ -746,50 +1045,6 @@ if word1 > word2 and word2 > word 3:
   **do something interesting here**
 ```
 <blockquote>Q21: Include your program for steps 72-75, including commments that document what the code is doing.</blockquote>
-
-## THIS GOES SOMEWHERE ELSE
-
-Conditional statements and `if`
-
-```Python
-#here is a list of names
-names=['department of computer science and engineering', 'computer science department', 'cse']
-
-#here is a loop. I am telling Python to look at each of the items in this list
-for name in names:
-
-  #this indent tells Python that this next action is part of the loop
-  #this is my if statement. Note that like a loop it ends in a colon (:)
-  #the double == is an equality operator. It's a boolean test (returns TRUE or FALSE)
-  if name == 'cse':
-
-    #if the value is equal to cs, then the conditional statement returns TRUE and the value is printed in all upper case letters
-    print(name.upper())
-
-  #the else statement gives the set of instructions for a FALSE value. Notice that it is indented same as the if statement.
-  else:
-
-    #All other values that are not 'cs' are printed as Titles
-    print(name.title())
-```
-
-20. This program returns the output
-`Department of Computer Science and Engineering`
-`Computer Science Department`
-`CSE`
-
-21. This program without the comments:
-```Python
-names=['department of computer science and engineering', 'computer science department', 'cse']
-
-for name in names:
-  if name == 'cse':
-    print(name.upper())
-  else:
-    print(name.title())
-```
-
-<blockquote>Q5: Did the program return the results that you expected? Explain the output in your own words.</blockquote>
 
 # Working with functions
 
