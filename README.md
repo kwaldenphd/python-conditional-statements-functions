@@ -264,9 +264,9 @@ print("You entered the color " + color)
 
 42. Note- to checking whether your program works, you will have to run it at least twice, entering colors that test both possible outcomes.
 
-<blockquote>Q1: Provide your code + comments for steps 13-18.</blockquote>
+<blockquote>Q1: Provide your code + comments for steps 37-42.</blockquote>
 
-<blockquote>Q2: Describe how you approached writing the program for Q3.</blockquote>
+<blockquote>Q2: Describe how you approached writing the program for Q2.</blockquote>
 
 ## `if-else` Statements
 
@@ -305,9 +305,7 @@ else:
 print ("This message prints every time.")
 ```
 
-<blockquote>Q3: Modify the program included above to test for different conditions and output different messages. Include comments that describe what the code is doing.</blockquote>
-
-<blockquote>Q4: Return to your Q3 program and modify so it prints one message if the user enters your favorite color, and a different message if not. In addition, your program should print a final message for every user, regardless of what they entered. Answer will include your modified code + comments that explain/describe what the code is doing.</blockquote>
+<blockquote>Q3: Return to the program you wrote for Q1 and Q2. Modify this program so it prints one message if the user enters your favorite color, and a different message if not. In addition, your program should print a final message for every user, regardless of what they entered. Include code + comments.</blockquote>
 
 ## Additional Work With `if` Statements
 
@@ -328,7 +326,7 @@ else:
   print('Would you like a banana?')
 ```
 
-<blockquote>Q5: Explain what this program will output and why.</blockquote>
+<blockquote>Q4: Explain what this program will output and why.</blockquote>
 
 50. We can check more than one condition using chained conditional statements (or chained conditionals).
 - Key term: *chained conditionals*
@@ -627,7 +625,7 @@ for index, letter in enumerate('abc'):
 numlist = [[0, 42], [67543, -987654]]
 ```
 
-<blockquote>Q6: What do you think will happen if we write a for loop for numlist? What would be a single element in the list?</blockquote>
+<blockquote>Q5: What do you think will happen if we write a for loop for numlist? What would be a single element in the list?</blockquote>
 
 92. Remember in a nested list, or a list with sub-lists, each sub-list is an item or element in the list.
 
@@ -672,7 +670,7 @@ for character in characters:
 print(characters[0].title() + " is my favorite.")
 ```
 
-<blockquote>Q7: What do you expect this code to output? Explain how this program works in your own words.</blockquote>
+<blockquote>Q6: What do you expect this code to output? Explain how this program works in your own words.</blockquote>
 
 98. Comments that walk through each line of this program:
 ```Python
@@ -704,9 +702,9 @@ print(characters[0].title() + " is my favorite.")
 - Check to see if that character matches `l`
 - If the character matches `l`, output some kind of message that indicates the position
 
-<blockquote>Q8: Describe how you would start building out code to accomplish this task? What functions, statements, or keywords would you need to use? How would you start to organize this program?</blockquote>
+<blockquote>Q7: Describe how you would start building out code to accomplish this task? What functions, statements, or keywords would you need to use? How would you start to organize this program?</blockquote>
 
-<blockquote>Q9: See where you can get with writing this program? What parts of the program were you able to get working? Where did you run into challenges?</blockquote>
+<blockquote>Q8: See where you can get with writing this program. What parts of the program were you able to get working? Where did you run into challenges?</blockquote>
 
 102. Here is one approach to this program.
 
@@ -754,7 +752,7 @@ for entry in enumerate(message):
 
 111. You can modify this code to include other messages or test for other characters.
 
-<blockquote>Q10: How does the sample program compare to your approach to the previous two questions? What was similar? What was different? How are you thinking different (if at all) about how to approach this type of program?</blockquote>
+<blockquote>Q9: How does the sample program compare to your approach to the previous two questions? What was similar? What was different? How are you thinking different (if at all) about how to approach this type of program?</blockquote>
 
 #### `for` Loop Example B
 
@@ -775,9 +773,9 @@ names=['department of computer science and engineering', 'computer science depar
 - If so, print out that element in upper case
 - Otherwise, print out that element in title case
 
-<blockquote>Q11: Describe how you would start building out code to accomplish this task? What functions, statements, or keywords would you need to use? How would you start to organize this program?</blockquote>
+<blockquote>Q10: Describe how you would start building out code to accomplish this task? What functions, statements, or keywords would you need to use? How would you start to organize this program?</blockquote>
 
-<blockquote>Q12: See where you can get with writing this program. What parts of the program were you able to get working? Where did you run into challenges?</blockquote>
+<blockquote>Q11: See where you can get with writing this program. What parts of the program were you able to get working? Where did you run into challenges?</blockquote>
 
 116. Here is one approach to this program.
 
@@ -832,7 +830,7 @@ for name in names:
 `CSE`
 ```
 
-<blockquote>Q13: How does the sample program compare to your approach to the previous two questions? What was similar? What was different? How are you thinking different (if at all) about how to approach this type of program?</blockquote>
+<blockquote>Q12: How does the sample program compare to your approach to the previous two questions? What was similar? What was different? How are you thinking different (if at all) about how to approach this type of program?</blockquote>
 
 ### OPTIONAL: Additional Practice With `for` Loops
 
@@ -894,9 +892,9 @@ while n < 10:
 
 138. After executing both lines in the body of the loop, the next iteration of the loop begins by evaluating the `n < 10` conditional statement.
 
-<blockquote>Q14: What is the value of <code>n</code> in the first iteration of the loop? What happens to the value of <code>n</code> in each iteration of the loop?</blockquote>
+<blockquote>Q13: What is the value of <code>n</code> in the first iteration of the loop? What happens to the value of <code>n</code> in each iteration of the loop?</blockquote>
 
-<blockquote>Q15: What is the endpoint for this loop, or when will this loop end?</blockquote>
+<blockquote>Q14: What is the endpoint for this loop, or when will this loop end?</blockquote>
 
 139. REMINDER: Loops that have no endpoint are called *infinite loops*.
 
@@ -917,11 +915,11 @@ while x >= 0:
 print('I'm done!')
 ```
 
-<blockquote>Q16: Now it's your turn. Describe what is happening in each line of this program. You can use the explanations for the previous example as a model.</blockquote>
+<blockquote>Q15: Now it's your turn. Describe what is happening in each line of this program. You can use the explanations for the previous example as a model.</blockquote>
 
-<blockquote>Q17: What is the value of <code>x</code> in the first iteration of the loop? What happens to the value of <code>x</code> in each iteration of the loop?</blockquote>
+<blockquote>Q16: What is the value of <code>x</code> in the first iteration of the loop? What happens to the value of <code>x</code> in each iteration of the loop?</blockquote>
 
-<blockquote>Q18: What is the endpoint for this loop, or when will this loop end?</blockquote>
+<blockquote>Q17: What is the endpoint for this loop, or when will this loop end?</blockquote>
 
 #### `while` Loop Example C
 
@@ -948,9 +946,9 @@ print ("Done")
 
 147. If the condition is ever false when it gets checked, execution will jump to the first statement after those associated with the loop (the first un-indented statement).
 
-<blockquote>Q19: What will happen if you remove the statement <code>count = count + 1</code> from this program? Remove the statement to verify your prediction.</blockquote>
+<blockquote>Q18: What will happen if you remove the statement <code>count = count + 1</code> from this program? Remove the statement to verify your prediction.</blockquote>
 
-<blockquote>Q20: Modify the program from steps 35-48 so that it prints some word or phrase nine times, and also prints a line number at the beginning of each line. Answer will include code + comments.</blockquote>
+<blockquote>Q19: Modify the program from steps 35-48 so that it prints some word or phrase nine times, and also prints a line number at the beginning of each line. Answer will include code + comments.</blockquote>
 
 148. For example, your output might look like the following: 
 
@@ -1006,11 +1004,11 @@ print("That's all, folks!")
 
 156. NOTE: `i += 10` in the last line of the `while` loop reassigns the value of `i` through an expression equivalent to `i = i + 10`.
 
-<blockquote>Q21: Now it's your turn. Describe what is happening in each line of this program. You can use explanations for previous examples as a model.</blockquote>
+<blockquote>Q20: Now it's your turn. Describe what is happening in each line of this program. You can use explanations for previous examples as a model.</blockquote>
 
-<blockquote>Q22: What is the value of <code>i</code> in the first iteration of the loop? What happens to the value of <code>i</code> in each iteration of the loop?</blockquote>
+<blockquote>Q21: What is the value of <code>i</code> in the first iteration of the loop? What happens to the value of <code>i</code> in each iteration of the loop?</blockquote>
 
-<blockquote>Q23: What is the endpoint for this loop, or when will this loop end?</blockquote>
+<blockquote>Q22: What is the endpoint for this loop, or when will this loop end?</blockquote>
 
 #### `break`
 
@@ -1034,7 +1032,7 @@ while i < 6:
 
 160. In this example, the loop breaks as soon as the `i == 3` condition is `True`.
 
-<blockquote>Q24: Describe what would happen in each iteration of this loop. How many iterations would it take for the <code>break</code> statement to come into effect?</blockquote>
+<blockquote>Q23: Describe what would happen in each iteration of this loop. How many iterations would it take for the <code>break</code> statement to come into effect?</blockquote>
 
 #### `continue`
 
@@ -1060,21 +1058,22 @@ while i < 6:
 
 165. Instead when `i == 3` is true, the loop will skip over the final nested `print` statement and return to the beginning of the loop for a new iteration.
 
-<blockquote>Q25: Describe what would happen in each iteration of this loop. How many iterations would it take for the <code>break</code> statement to come into effect?</blockquote>
+<blockquote>Q24: Describe what would happen in each iteration of this loop. How many iterations would it take for the <code>break</code> statement to come into effect?</blockquote>
 
-<blockquote>Q26: What is the endpoint for this loop, or when will this loop end?</blockquote>
+<blockquote>Q25: What is the endpoint for this loop, or when will this loop end?</blockquote>
 
 ## Additional Work With Loops
 
 166. The following lab notebook questions can use `for` or `while` loops, a variety of conditional statements and comparison operators, and other Python concepts covered thus far.
 
+### Lab Notebook Question 26
+
+Q26: Write a loop that prints out all numbers from 0 to 10. Include your code + comments that document how the code works.
+  
 ### Lab Notebook Question 27
 
-Q27: Write a loop that prints out all numbers from 0 to 10. Include your code + comments that document how the code works.
-  
-### Lab Notebook Question 28
+Q27: Convert the following Python code to use a while loop instead of a for loop. Include your modified code with comments.
 
-Q28: Convert the following Python code to use a while loop instead of a for loop. Include your modified code with comments.
 ```Python
 numbers = [5, 4, 7, 0, 1]
 count   = 0
@@ -1087,9 +1086,9 @@ for number in numbers:
 print(count)
 ```
 
-### Lab Notebook Question 29
+### Lab Notebook Question 28
 
-Q29: Write a program that prints a list of the first nine positive integers and their squares. Include code + comments.
+Q28: Write a program that prints a list of the first nine positive integers and their squares. Include code + comments.
 
 Your output should look similar to the following:
 ```Python
@@ -1105,9 +1104,9 @@ Number Square
 9        81
 ```
 
-### Lab Notebook Question 30
+### Lab Notebook Question 29
 
-Q30: Write a program that counts from 10 down to 1, and then prints "Blastoff!" 
+Q29: Write a program that counts from 10 down to 1, and then prints "Blastoff!" 
 
 Your output should similar to the following:
 ```Python
@@ -1124,9 +1123,9 @@ Your output should similar to the following:
 Blastoff!
 ```
 
-### Lab Notebook Question 31
+### Lab Notebook Question 30
 
-Q31: Write a program that asks the user to enter three numbers: a starting value, an ending value, and an increment. Your program should then "count" based on these criteria, as shown in the sample output below. Include code + comments.
+Q30: Write a program that asks the user to enter three numbers: a starting value, an ending value, and an increment. Your program should then "count" based on these criteria, as shown in the sample output below. Include code + comments.
 
 ```Python
 This program counts for you.
@@ -1141,9 +1140,9 @@ Enter the increment: 2
 13
 ```
 
-### Lab Notebook Question 32
+### Lab Notebook Question 31
 
-Q32: Write a program that uses a while-loop to print the output shown below. Include code + comments.
+Q31: Write a program that uses a while-loop to print the output shown below. Include code + comments.
 ```Python
 1
 2
@@ -1160,9 +1159,9 @@ happy
 
 The program should print the numbers 1 through 10, except that between 7 and 8 it should print the word "happy". 68. This can be accomplished by placing an if-statement within the while-loop to do something special for the lineNumber == 7 case.
 
-### Lab Notebook Question 33
+### Lab Notebook Question 32
 
-Q33: Write a program that plays a familiar guessing game.
+Q32: Write a program that plays a familiar guessing game.
 - First your program will set some number to be the "correct answer"
 - Then your program will ask the user to guess this answer until they get it right. 
 - For each guess your program should give a hint based on whether the guess was too high or too low.
@@ -1190,9 +1189,9 @@ Things to consider:
 - This program will require a loop with some if-statements inside it.
 - Each time through the loop, you must accept a new guess from the user. This can be done by using the function input inside the loop.
 
-### Lab Notebook Question 34
+### Lab Notebook Question 33
 
-Q34: Write a program that reads in three strings and prints them out in alphabetical order. Include code + comments.
+Q33: Write a program that reads in three strings and prints them out in alphabetical order. Include code + comments.
 
 Sample output for this program:
 ```Python
@@ -1217,9 +1216,9 @@ if word1 > word2 and word2 > word 3:
 
 ### Additional Lab Notebook Questions
 
-Q35: In your own words, what is iteration?
+Q34: In your own words, what is iteration?
 
-Q36: In your own words, what is the difference between a `for` loop and a `while` loop?
+Q35: In your own words, what is the difference between a `for` loop and a `while` loop?
 
 # Functions
 
@@ -1348,9 +1347,9 @@ printThreeTimes("There's no place like home.")
 
 204. Here, we want to create a function that prints an input string a specific number of times.
 
-<blockquote>Q37: Describe how you would start building out code to accomplish this task? What functions, statements, or keywords would you need to use? How would you start to organize this program?</blockquote>
+<blockquote>Q36: Describe how you would start building out code to accomplish this task? What functions, statements, or keywords would you need to use? How would you start to organize this program?</blockquote>
 
-<blockquote>Q38: See where you can get with writing this program. What parts of the program were you able to get working? Where did you run into challenges?</blockquote>
+<blockquote>Q37: See where you can get with writing this program. What parts of the program were you able to get working? Where did you run into challenges?</blockquote>
 
 205. Here is one approach to this task.
 
@@ -1389,9 +1388,9 @@ def printNTimes(string, times):
 
 216. So now we have a function that prints our string a number of times specified by the `times` value in combination with the `range()` function.
 
-<blockquote>Q39: How does the sample program compare to your approach to the previous two questions? What was similar? What was different? How are you thinking different (if at all) about how to approach this type of program?</blockquote>
+<blockquote>Q38: How does the sample program compare to your approach to the previous two questions? What was similar? What was different? How are you thinking different (if at all) about how to approach this type of program?</blockquote>
 
-<blockquote>Q40: How would you write a program that calls the function you have created? Include code + comments.</blockquote>
+<blockquote>Q39: How would you write a program that calls the function you have created? Include code + comments.</blockquote>
 
 <blockquote><a href="https://www.w3schools.com/python/python_functions.asp">Click here</a> for more information on named functions in Python, via W3Schools.</blockquote>
 
@@ -1508,13 +1507,13 @@ help(printThreeTimes)
 
 ## Additional Work With Functions
 
-Q41: Write a function `is_even` that determines whether or not a number `n` is even. Include code + comments for the function definition as well as a sample function call.
+Q40: Write a function `is_even` that determines whether or not a number `n` is even. Include code + comments for the function definition as well as a sample function call.
 
-Q42: Write a function `average` that determines the average value of a list. Include code + comments for the function definition as well as a sample function call.
+Q41: Write a function `average` that determines the average value of a list. Include code + comments for the function definition as well as a sample function call.
 
-Q43: Write a function `uniq` that takes a list and returns a new list containing only unique values. Include code + comments for the function definition as well as a sample function call.
+Q42: Write a function `uniq` that takes a list and returns a new list containing only unique values. Include code + comments for the function definition as well as a sample function call.
 
-Q44: The Python code below is suppose to create a function that determines if the given list of numbers is sorted. That is, the function should return `True` if each item in the list is less than the next item. Unfortunately, there are a few errors in the code below. Identify the errors and fix the code. Include your modified code with comments that document what changes you made to address the errors.
+Q43: The Python code below is suppose to create a function that determines if the given list of numbers is sorted. That is, the function should return `True` if each item in the list is less than the next item. Unfortunately, there are a few errors in the code below. Identify the errors and fix the code. Include your modified code with comments that document what changes you made to address the errors.
 
 ```Python
 is_sorted([1, 2, 3, 4, 2])
@@ -1527,72 +1526,23 @@ def is_sorted(numbers):
     return True
 ```
 
-Q45: In your own words, what is a function?
+Q44: In your own words, what is a function?
 
-Q46: In your own words, how do we create a function?
+Q45: In your own words, how do we create a function?
 
-Q47: In your own words, what is an argument or parameter?
+Q46: In your own words, what is an argument or parameter?
 
-Q48: In your own words, what is a return value?
+Q47: In your own words, what is a return value?
 
-Q49: Why would we use functions?
+Q48: Why would we use functions?
 
 # Lab Notebook Questions
 
-Q1: In your own words, what is a boolean/logical expression?
+Q1: Provide your code + comments for steps 37-42.
 
-Q2: In your words, what is as conditional statement (or conditional execution)?
+Q2: Describe how you approached writing the program for Q2.
 
-Q3: Provide your code + comments for steps 13-18.
+Q3: Return to the program you wrote for Q1 and Q2. Modify this program so it prints one message if the user enters your favorite color, and a different message if not. In addition, your program should print a final message for every user, regardless of what they entered. Include code + comments.
 
-Q4: Describe how you approached writing the program for Q3.
 
-Q5: Did the program return the results that you expected? Explain the output in your own words.
 
-Q6: Explain what this program will output and why.
-
-Q7: Include your modified code for step 26, including comments that describe what the code is doing.
-
-Q8: Return to your Q3 program and modify so it prints one message if the user enters your favorite color, and a different message if not. In addition, your program should print a final message for every user, regardless of what they entered. Answer will include your modified code + comments that explain/describe what the code is doing.
-
-Q9: What do you expect this code to output? Explain how this program works in your own words.
-
-Q10: Modify the program from steps 35-48 so that it prints some word or phrase nine times, and also prints a line number at the beginning of each line. Answer will include code + comments.
-
-Q11: In your own words, what is iteration?
-
-Q12: In your own words, what is the difference between a `while` loop and a `for` loop?
-
-Q13: Write a loop that prints out all numbers from 0 to 10. Include your code + comments that document how the code works.
-
-Q14: Include your modified code for step 50, including commments that document what changes you made.
-
-Q15: Include your modified code for steps 51-53, including commments that document what changes you made to address the errors.
-
-Q16: Include your program for steps 54-56, including commments that document what the code is doing.
-
-Q17: Include your program for steps 57-58, including commments that document what the code is doing.
-
-Q18: Include your program for steps 59-60, including commments that document what the code is doing.
-
-Q19: Include your program for steps 65-68, including commments that document what the code is doing.
-
-Q20: Include your program for steps 69-71, including commments that document what the code is doing.
-
-Q21: Include your program for steps 72-75, including commments that document what the code is doing.
-
-Q22: In your own words, what is a function?
-
-Q23: How do we create a function?
-
-Q24: In your own words, what is an argument or parameter?
-
-Q25: In you own words, what is a return value?
-
-Q26: Why would we use functions?
-
-Q27: Write a function `is_even` that determines whether or not a number n is even. Answer includes your code + comments.
-
-Q28: Write a function `average` that determines the average value of a list. Answer includes your code + comments.
-
-Q29: Write a function `uniq` that takes a list and returns a new list containing only unique values.
