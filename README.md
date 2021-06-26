@@ -266,7 +266,7 @@ print("You entered the color " + color)
 
 <blockquote>Q1: Provide your code + comments for steps 37-42.</blockquote>
 
-<blockquote>Q2: Describe how you approached writing the program for Q2.</blockquote>
+<blockquote>Q2: Describe how you approached writing the program for Q1.</blockquote>
 
 ## `if-else` Statements
 
@@ -1534,13 +1534,13 @@ Q46: In your own words, what is an argument or parameter?
 
 Q47: In your own words, what is a return value?
 
-Q48: Why would we use functions?
+Q48: Why would we use functions, or what is the value of functions?
 
 # Lab Notebook Questions
 
 Q1: Provide your code + comments for steps 37-42.
 
-Q2: Describe how you approached writing the program for Q2.
+Q2: Describe how you approached writing the program for Q1.
 
 Q3: Return to the program you wrote for Q1 and Q2. Modify this program so it prints one message if the user enters your favorite color, and a different message if not. In addition, your program should print a final message for every user, regardless of what they entered. Include code + comments.
 
@@ -1743,4 +1743,4 @@ Q46: In your own words, what is an argument or parameter?
 
 Q47: In your own words, what is a return value?
 
-Q48: Why would we use functions?
+Q48: Why would we use functions, or what is the value of functions?
