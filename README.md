@@ -1469,10 +1469,10 @@ def printThreeTimes(string):
 
 234. We have a couple options for accessing the contents of the docstring elesewhere in the program.
 
-235. We can use the `_doc_` method (underscore, doc, underscore).
+235. We can use the `_doc_` method (underscore, underscore, doc, underscore, underscore).
 ```Python
-print(Using _doc_:")
-print(printThreeTimes._doc_)
+print(Using __doc__:")
+print(printThreeTimes.__doc__)
 ```
 
 236. Or we can use the `help()` function.
