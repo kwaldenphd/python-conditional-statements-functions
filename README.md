@@ -1058,7 +1058,7 @@ while i < 6:
 
 165. Instead when `i == 3` is true, the loop will skip over the final nested `print` statement and return to the beginning of the loop for a new iteration.
 
-<blockquote>Q24: Describe what would happen in each iteration of this loop. How many iterations would it take for the <code>break</code> statement to come into effect?</blockquote>
+<blockquote>Q24: Describe what would happen in each iteration of this loop. How many iterations would it take for the <code>continue</code> statement to come into effect?</blockquote>
 
 <blockquote>Q25: What is the endpoint for this loop, or when will this loop end?</blockquote>
 
@@ -1643,7 +1643,7 @@ while i < 6:
  i += 1
 ```
  
-Q24: Describe what would happen in each iteration of this loop. How many iterations would it take for the break statement to come into effect?
+Q24: Describe what would happen in each iteration of this loop. How many iterations would it take for the continue statement to come into effect?
 
 ```Python
 # assign the i variable
