@@ -188,7 +188,7 @@ while i < 6:
  i += 1
 """
  
-"""Q24: Describe what would happen in each iteration of this loop. How many iterations would it take for the break statement to come into effect?
+"""Q24: Describe what would happen in each iteration of this loop. How many iterations would it take for the continue statement to come into effect?
 
 # assign the i variable
 i = 0
