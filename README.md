@@ -912,7 +912,7 @@ while x >= 0:
  x = x-1
 
 # message to print once loop has completed
-print('I'm done!')
+print("I'm done!")
 ```
 
 <blockquote>Q15: Now it's your turn. Describe what is happening in each line of this program. You can use the explanations for the previous example as a model.</blockquote>
@@ -1471,7 +1471,7 @@ def printThreeTimes(string):
 
 235. We can use the `_doc_` method (underscore, underscore, doc, underscore, underscore).
 ```Python
-print(Using __doc__:")
+print("Using __doc__:")
 print(printThreeTimes.__doc__)
 ```
 
