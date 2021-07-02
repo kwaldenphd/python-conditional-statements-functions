@@ -35,7 +35,7 @@ Elements of this lab procedure were adapted from materials developed by [Lindsay
 
 - [Conditional Statements](#conditional-statements)
   * [Operator Review](#operator-review)
-  * [`'if` Statements](#if-statements)
+  * [`if` Statements](#if-statements)
   * [`if` Statements and Strings](#if-statements-and-strings)
   * [`if-else` Statements](#if-else-statements)
   * [Additional Work With `if` Statements](#additional-work-with-if-statements)
