@@ -1079,9 +1079,11 @@ numbers = [5, 4, 7, 0, 1]
 count   = 0
 
 for number in numbers:
-    if not number:
-        break
+  if count in numbers:
+    print(count)
     count += 1
+  else:
+    break
 
 print(count)
 ```
